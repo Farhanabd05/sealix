@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/FityatulHaqRosyidi/sealix/internal/jsonstrict"
+	"github.com/FityatulhaqRosyidi/sealix/app/internal/jsonstrict"
 )
 
 const MaxSize = 64 * 1024
@@ -16,7 +16,7 @@ const Schema = "minisign-bundle/v1"
 type wire struct {
 	Schema string `json:"schema"`
 	Manifest string `json:"manifest_b64"`
-	Signature string `josn:"signature_b64"`
+	Signature string `json:"signature_b64"`
 }
 
 func Marshal(manifest, sig []byte) []byte {
@@ -37,9 +37,13 @@ func Parse(data []byte) ([]byte, []byte, error) {
 		return nil, nil, fmt.Errorf("Bundle JSON invalid: %w", err,)
 	}
 
-	var fields map[String]json.RawMessage
+	var fields map[string]json.RawMessage
 
-	if err := json.Unmarshal(data, &fields); err := nil {
+	if err := json.Unmarshal(data, &fields); err != nil {
+		return nil, nil, err
+	}
+
+	if len(fields) != 3 {
 		return nil, nil, errors.New("Bundle harus tepat memiliki 3 field",)
 	}
 
@@ -53,7 +57,7 @@ func Parse(data []byte) ([]byte, []byte, error) {
 
 	var b wire
 
-	if err := json.Unmarshal(data, &b), err := nil {
+	if err := json.Unmarshal(data, &b); err != nil {
 		return nil, nil, err
 	}
 

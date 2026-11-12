@@ -3,11 +3,10 @@ package cli
 import (
 	"fmt"
 	"io"
-	"github.com/FityatulHaqRosyidi/sealix/app"
-	"github.com/FityatulhaqRosyidi/sealix/internal/trustcmd"
-	"github.com/FityatulhaqRosyidi/sealix/internal/verifycmd"
-	// "github.com/FityatulhaqRosyidi/sealix/internal/keygencmd"
-	// "github.com/FityatulhaqRosyidi/sealix/internal/signcmd"
+	"github.com/FityatulhaqRosyidi/sealix/app/internal/trustcmd"
+	"github.com/FityatulhaqRosyidi/sealix/app/internal/verifycmd"
+	// "github.com/FityatulhaqRosyidi/sealix/app/internal/keygencmd"
+	// "github.com/FityatulhaqRosyidi/sealix/app/internal/signcmd"
 )
 
 func Run(
