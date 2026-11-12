@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"github.com/FityatulHaqRosyidi/sealix/app"
 	"github.com/FityatulhaqRosyidi/sealix/internal/cli"
 )
 

@@ -3,8 +3,9 @@ package cli
 import (
 	"fmt"
 	"io"
+	"github.com/FityatulHaqRosyidi/sealix/app"
 	"github.com/FityatulhaqRosyidi/sealix/internal/trustcmd"
-	"github.com/FityatulhaqRosyidi/sealix/internal/verifiycmd"
+	"github.com/FityatulhaqRosyidi/sealix/internal/verifycmd"
 	// "github.com/FityatulhaqRosyidi/sealix/internal/keygencmd"
 	// "github.com/FityatulhaqRosyidi/sealix/internal/signcmd"
 )
