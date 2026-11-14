@@ -4,16 +4,16 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/FityatulhaqRosyidi/sealix/app/internal/keys"
+	"github.com/FityatulhaqRosyidi/sealix/app/internal/truststore"
 	"io"
 	"os"
 	"strings"
-	"github.com/FityatulhaqRosyidi/sealix/app/internal/keys"
-	"github.com/FityatulhaqRosyidi/sealix/app/internal/truststore"
 )
 
-func Run(args []string, out io.Writer, errOut io.Writer,) int {
+func Run(args []string, out io.Writer, errOut io.Writer) int {
 	if len(args) == 0 {
-		fmt.Fprintln(errOut, "usage: trust add|list|remove",)
+		fmt.Fprintln(errOut, "usage: trust add|list|remove")
 		return 2
 	}
 
@@ -26,29 +26,29 @@ func Run(args []string, out io.Writer, errOut io.Writer,) int {
 		return remove(args[1:], out, errOut)
 	}
 
-	fmt.Fprintln(errOut, "subcommand trust tidak dikenali",)
+	fmt.Fprintln(errOut, "subcommand trust tidak dikenali")
 	return 2
 }
 
-func flags(name string, stderr io.Writer,) *flag.FlagSet {
-	f := flag.NewFlagSet(name, flag.ContinueOnError,)
+func flags(name string, stderr io.Writer) *flag.FlagSet {
+	f := flag.NewFlagSet(name, flag.ContinueOnError)
 
 	f.SetOutput(stderr)
 
 	return f
 }
 
-func getStore(path string, create bool,) (*truststore.Store, error) {
+func getStore(path string, create bool) (*truststore.Store, error) {
 	s, err := truststore.Load(path)
 
 	if errors.Is(err, os.ErrNotExist) && create {
-		return truststore.Empty(), nil 
+		return truststore.Empty(), nil
 	}
 
-	return s, err 
+	return s, err
 }
 
-func add(args []string, out io.Writer, errOut io.Writer,) int {
+func add(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust add", errOut)
 
 	store := f.String("trust-store", "", "path trust store")
@@ -62,22 +62,22 @@ func add(args []string, out io.Writer, errOut io.Writer,) int {
 		*public == "" ||
 		*pkg == "" {
 
-			fmt.Fprintln(
-				errOut, 
-				"usage: trust add --trust-store PATH" + 
-				"--public-key PEM --package NAME" +
+		fmt.Fprintln(
+			errOut,
+			"usage: trust add --trust-store PATH"+
+				"--public-key PEM --package NAME"+
 				"[--keyid HEX]",
-			)
+		)
 
-			return 2
-		}
+		return 2
+	}
 
 	b, err := os.ReadFile(*public)
 	if err != nil {
 		fmt.Fprintln(errOut, err)
 		return 2
 	}
-	
+
 	pub, alg, err := keys.ParsePublicPEM(b)
 	if err != nil {
 		fmt.Fprintln(errOut, err)
@@ -124,7 +124,7 @@ func add(args []string, out io.Writer, errOut io.Writer,) int {
 	return 0
 }
 
-func list(args []string, out io.Writer, errOut io.Writer,) {
+func list(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust list", errOut)
 
 	path := f.String("trust-store", "", "path trust store")
@@ -152,7 +152,7 @@ func list(args []string, out io.Writer, errOut io.Writer,) {
 	return 0
 }
 
-func remove(args []string, out io.Writer, errOut io.Writer,) {
+func remove(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust remove", errOut)
 
 	path := f.String("trust-store", "", "path trust store")
@@ -162,14 +162,14 @@ func remove(args []string, out io.Writer, errOut io.Writer,) {
 		f.NArg() != 0 ||
 		*path == "" ||
 		*id == "" {
-			fmt.Fprintln(
-				errOut,
-				"usage: trust remove" +
+		fmt.Fprintln(
+			errOut,
+			"usage: trust remove"+
 				"--trust-store PATH --keyid HEX",
-			)
-			return 2
-		}
-	
+		)
+		return 2
+	}
+
 	s, err := truststore.Load(*path)
 	if err != nil {
 		fmt.Fprintln(errOut, err)

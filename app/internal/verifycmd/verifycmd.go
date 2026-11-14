@@ -6,26 +6,26 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
-	"os"
-	"path/filepath"
-	"slices"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/bundle"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/keys"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/manifest"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/result"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/sigalg"
 	"github.com/FityatulhaqRosyidi/sealix/app/internal/truststore"
+	"io"
+	"os"
+	"path/filepath"
+	"slices"
 )
 
 type Report struct {
-	Valid bool `json:"valid"`
-	Status result.Status `json:"status"`
-	Message string `json"message"`
-	Algorithm *string `json:"algorithm"`
-	KeyID *string `json:"keyid"`
-	Package  *string `json:"package"`
-	Version *string `json:"version"`
+	Valid     bool          `json:"valid"`
+	Status    result.Status `json:"status"`
+	Message   string        `json:"message"`
+	Algorithm *string       `json:"algorithm"`
+	KeyID     *string       `json:"keyid"`
+	Package   *string       `json:"package"`
+	Version   *string       `json:"version"`
 }
 
 func Run(args []string, out io.Writer, errOut io.Writer) int {
@@ -49,18 +49,18 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 
 	emit := func(status result.Status, msg string) int {
 		report.Status = status
-		report.Message = msg 
-		report.Valid = status == result.OK 
+		report.Message = msg
+		report.Valid = status == result.OK
 
 		if *jsonOut {
 			if err := json.NewEncoder(out).Encode(report); err != nil {
-                fmt.Fprintln(errOut, err)
-                return 2	
+				fmt.Fprintln(errOut, err)
+				return 2
 			}
 		} else if status == result.OK {
 			fmt.Fprintln(out, "OK:", msg)
 		} else {
-			fmt.Fprintf(out, "REEJECTED [%s]: %s\n", status, msg)
+			fmt.Fprintf(out, "REJECTED [%s]: %s\n", status, msg)
 		}
 
 		if status != result.OK {
@@ -74,54 +74,54 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 		return emit(result.InputError, err.Error())
 	}
 
-	if f.NArg() != 0 || 
+	if f.NArg() != 0 ||
 		*file == "" ||
 		*bundlePath == "" ||
 		*trust == "" ||
 		*pkg == "" ||
 		*version == "" {
-			return emit(
-				result.InputError,
-				"wajib: --file --bundle "+
+		return emit(
+			result.InputError,
+			"wajib: --file --bundle "+
 				"--trust-store --package --version",
-			)
-		}
+		)
+	}
 
 	artifact, err := os.Open(*file)
-    if err != nil {
+	if err != nil {
 		return emit(result.InputError, err.Error())
-    }
+	}
 
 	defer artifact.Close()
 
 	b, err := os.ReadFile(*bundlePath)
-    if err != nil {
+	if err != nil {
 		return emit(result.InputError, err.Error())
-    }
+	}
 
 	trustData, err := os.ReadFile(*trust)
-    if err != nil {
+	if err != nil {
 		return emit(result.InputError, err.Error())
-    }
+	}
 
 	// FORMAT ERROR
 	raw, sig, err := bundle.Parse(b)
-    if err != nil {
+	if err != nil {
 		return emit(result.FormatError, err.Error())
-    }
+	}
 
 	m, err := manifest.ParseStrict(raw)
-    if err != nil {
+	if err != nil {
 		return emit(result.FormatError, err.Error())
-    }
+	}
 
-	stone, err := truststore.Parse(trustData)
-    if err != nil {
+	store, err := truststore.Parse(trustData)
+	if err != nil {
 		return emit(result.FormatError, err.Error())
-    }
+	}
 
 	report.Algorithm = &m.Algorithm
-	report.KeyID = &m.KeyID 
+	report.KeyID = &m.KeyID
 	report.Package = &m.Package
 	report.Version = &m.Version
 
@@ -135,14 +135,14 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 	// KEY NOT TRUSTED
 	entry, ok := store.Lookup(m.KeyID)
 
-	if !ok || entry.Algorithm != m.Algorithm || !slices.Contains(entry.Package, *pkg) {
+	if !ok || entry.Algorithm != m.Algorithm || !slices.Contains(entry.Packages, *pkg) {
 		return emit(result.KeyNotTrusted, "kunci tidak diizinkan untuk paket yang diharapkan")
 	}
 
 	pub, keyAlg, err := keys.ParsePublicPEM([]byte(entry.PublicKeyPEM))
-    if err != nil {
+	if err != nil {
 		return emit(result.FormatError, err.Error())
-    }
+	}
 
 	if keyAlg.Name() != alg.Name() {
 		return emit(result.KeyNotTrusted, "profil kunci tidak sesuai")
@@ -162,14 +162,14 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 	h := sha256.New()
 
 	size, err := io.Copy(h, artifact)
-    if err != nil {
+	if err != nil {
 		return emit(result.InputError, err.Error())
 
-    }
+	}
 
 	actualHash := hex.EncodeToString(h.Sum(nil))
 
-	if fmt.Sprintf(size) != fmt.Sprintf(m.Artifact.Size) || actualHash != m.Artifact.SHA256 {
+	if size != m.Artifact.Size || actualHash != m.Artifact.SHA256 {
 		return emit(result.ArtifactMismatch, "isi atau ukuran artefak berbeda")
 	}
 
