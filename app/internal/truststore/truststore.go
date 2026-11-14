@@ -124,7 +124,7 @@ func Parse(data []byte) (*Store, error) {
 
 	if len(root) != 2 ||
 		root["schema"] == nil ||
-		root["keys"] != nil ||
+		root["keys"] == nil ||
 		bytes.Equal(bytes.TrimSpace(root["keys"]), []byte("null")) {
 		return nil, errors.New("field trust store tidak tepat")
 	}

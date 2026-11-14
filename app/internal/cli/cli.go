@@ -70,17 +70,17 @@ Commands:
 			[--force]
 
 		trust add
-			--trust-store PATH
-			--public-key PEM
+			--key PEM
 			--package NAME
+			--store PATH
 			[--keyid HEX]
 
 		trust list
-			--trust-store PATH
+			--store PATH
 		
 		trust remove
-			--trust-store PATH
 			--keyid HEX
+			--store PATH
 
 		verify
 			--file PATH

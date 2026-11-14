@@ -51,8 +51,8 @@ func getStore(path string, create bool) (*truststore.Store, error) {
 func add(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust add", errOut)
 
-	store := f.String("trust-store", "", "path trust store")
-	public := f.String("public-key", "", "path public key PEM")
+	store := f.String("store", "", "path trust store")
+	public := f.String("key", "", "path public key PEM")
 	pkg := f.String("package", "", "nama paket")
 	pin := f.String("keyid", "", "fingerprint yang diharapkan (opsional)")
 
@@ -64,8 +64,7 @@ func add(args []string, out io.Writer, errOut io.Writer) int {
 
 		fmt.Fprintln(
 			errOut,
-			"usage: trust add --trust-store PATH"+
-				"--public-key PEM --package NAME"+
+			"usage: trust add --key PEM --package NAME --store PATH "+
 				"[--keyid HEX]",
 		)
 
@@ -127,10 +126,10 @@ func add(args []string, out io.Writer, errOut io.Writer) int {
 func list(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust list", errOut)
 
-	path := f.String("trust-store", "", "path trust store")
+	path := f.String("store", "", "path trust store")
 
 	if f.Parse(args) != nil || f.NArg() != 0 || *path == "" {
-		fmt.Fprintln(errOut, "usage: trust list --trust-store PATH")
+		fmt.Fprintln(errOut, "usage: trust list --store PATH")
 		return 2
 	}
 
@@ -155,7 +154,7 @@ func list(args []string, out io.Writer, errOut io.Writer) int {
 func remove(args []string, out io.Writer, errOut io.Writer) int {
 	f := flags("trust remove", errOut)
 
-	path := f.String("trust-store", "", "path trust store")
+	path := f.String("store", "", "path trust store")
 	id := f.String("keyid", "", "fingerprint")
 
 	if f.Parse(args) != nil ||
@@ -164,8 +163,7 @@ func remove(args []string, out io.Writer, errOut io.Writer) int {
 		*id == "" {
 		fmt.Fprintln(
 			errOut,
-			"usage: trust remove"+
-				"--trust-store PATH --keyid HEX",
+			"usage: trust remove --keyid HEX --store PATH",
 		)
 		return 2
 	}
@@ -193,15 +191,15 @@ func remove(args []string, out io.Writer, errOut io.Writer) int {
 
 // # Tambah key
 // ./sealix trust add \
-//   --trust-store ci/trust.json \
-//   --public-key public.pem \
+//   --key public.pem \
 //   --package contoh-app
+//   --store ci/trust.json
 
 // # Tampilkan semua key
 // ./sealix trust list \
-//   --trust-store ci/trust.json
+//   --store ci/trust.json
 
 // # Hapus key
 // ./sealix trust remove \
-//   --trust-store ci/trust.json \
-//   --keyid FINGERPRINT_64_HEX
+//   --keyid FINGERPRINT_64_HEX \
+//   --store ci/trust.json
