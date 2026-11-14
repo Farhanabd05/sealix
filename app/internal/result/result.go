@@ -1,23 +1,26 @@
 package result
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type Status string
 
 const (
-	OK Status = "OK"
-	InputError Status = "INPUT_ERROR"
-	FormatError Status = "FORMAT_ERROR"
+	OK                   Status = "OK"
+	InputError           Status = "INPUT_ERROR"
+	FormatError          Status = "FORMAT_ERROR"
 	UnsupportedAlgorithm Status = "UNSUPPORTED_ALGORITHM"
-	KeyNotTrusted Status = "KEY_NOT_TRUSTED"
-	InvalidSignature Status = "INVALID_SIGNATURE"
-	MetadataMismatch Status = "METADATA_MISMATCH"
-	ArtifactMismatch Status = "ARTIFACT_MISMATCH"
+	KeyNotTrusted        Status = "KEY_NOT_TRUSTED"
+	InvalidSignature     Status = "INVALID_SIGNATURE"
+	MetadataMismatch     Status = "METADATA_MISMATCH"
+	ArtifactMismatch     Status = "ARTIFACT_MISMATCH"
 )
 
 type Error struct {
 	Status Status
-	Msg string
+	Msg    string
 }
 
 func (e *Error) Error() string {
@@ -27,8 +30,16 @@ func (e *Error) Error() string {
 func New(s Status, msg string) error {
 	return &Error{
 		Status: s,
-		Msg: msg,
+		Msg:    msg,
 	}
+}
+
+func StatusOf(err error) Status {
+	var resultErr *Error
+	if errors.As(err, &resultErr) {
+		return resultErr.Status
+	}
+	return ""
 }
 
 func ExitCode(s Status) int {
@@ -40,4 +51,3 @@ func ExitCode(s Status) int {
 	}
 	return 1
 }
-

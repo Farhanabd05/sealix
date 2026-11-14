@@ -23,4 +23,3 @@ func TestExitCodes(t *testing.T) {
 		}
 	}
 }
-
