@@ -32,13 +32,20 @@ func (ecdsaP256) Generate() (crypto.Signer, error) {
 }
 
 func (ecdsaP256) CheckPublic(pub crypto.PublicKey) error {
-	return errors.New("belum diimplementasikan")
+	pk, ok := pub.(*ecdsa.PublicKey)
+	if !ok || pk == nil {
+		return errors.New("kunci publik bukan *ecdsa.PublicKey yang valid")
+	}
+	if pk.Curve != elliptic.P256() {
+		return errors.New("kurva kunci publik bukan P-256")
+	}
+	return nil
 }
 
 func (ecdsaP256) Sign(k crypto.Signer, msg []byte) ([]byte, error) {
 	priv, ok := k.(*ecdsa.PrivateKey)
-	if !ok {
-		return nil, errors.New("jenis kunci privat bukan *ecdsa.PrivateKey")
+	if !ok || priv == nil {
+		return nil, errors.New("jenis kunci privat bukan *ecdsa.PrivateKey yang valid")
 	}
 	if priv.Curve != elliptic.P256() {
 		return nil, errors.New("kurva kunci privat bukan P-256")
@@ -65,12 +72,8 @@ func (ecdsaP256) Sign(k crypto.Signer, msg []byte) ([]byte, error) {
 	return out, nil
 }
 
-func (ecdsaP256) Verify(pub crypto.PublicKey, msg, sig []byte) bool {
-	pk, ok := pub.(*ecdsa.PublicKey)
-	if !ok || pk == nil {
-		return false
-	}
-	if pk.Curve != elliptic.P256() {
+func (e ecdsaP256) Verify(pub crypto.PublicKey, msg, sig []byte) bool {
+	if err := e.CheckPublic(pub); err != nil {
 		return false
 	}
 	if len(sig) != 64 {
@@ -85,7 +88,7 @@ func (ecdsaP256) Verify(pub crypto.PublicKey, msg, sig []byte) bool {
 		return false
 	}
 
+	pk := pub.(*ecdsa.PublicKey)
 	digest := sha256.Sum256(msg)
 	return ecdsa.VerifyASN1(pk, digest[:], der)
 }
-x	

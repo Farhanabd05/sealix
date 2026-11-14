@@ -28,7 +28,14 @@ func (ed25519Alg) Generate() (crypto.Signer, error) {
 }
 
 func (ed25519Alg) CheckPublic(pub crypto.PublicKey) error {
-	return errors.New("belum diimplementasikan")
+	pk, ok := pub.(ed25519.PublicKey)
+	if !ok {
+		return errors.New("kunci publik bukan ed25519.PublicKey")
+	}
+	if len(pk) != ed25519.PublicKeySize {
+		return errors.New("ukuran kunci publik Ed25519 harus 32 byte")
+	}
+	return nil
 }
 
 func (ed25519Alg) Sign(k crypto.Signer, msg []byte) ([]byte, error) {
@@ -42,16 +49,13 @@ func (ed25519Alg) Sign(k crypto.Signer, msg []byte) ([]byte, error) {
 	return ed25519.Sign(priv, msg), nil
 }
 
-func (ed25519Alg) Verify(pub crypto.PublicKey, msg, sig []byte) bool {
-	pk, ok := pub.(ed25519.PublicKey)
-	if !ok {
-		return false
-	}
-	if len(pk) != ed25519.PublicKeySize {
+func (e ed25519Alg) Verify(pub crypto.PublicKey, msg, sig []byte) bool {
+	if err := e.CheckPublic(pub); err != nil {
 		return false
 	}
 	if len(sig) != ed25519.SignatureSize {
 		return false
 	}
+	pk := pub.(ed25519.PublicKey)
 	return ed25519.Verify(pk, msg, sig)
 }
