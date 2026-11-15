@@ -6,3 +6,5 @@ temp.go
 .DS_Store
 /out/
 /dist/
+bench/data/
+/bin/
