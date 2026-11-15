@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+var clock = time.Now
+
 type benchCase struct {
 	metric, profile, artifact string
 	fn                        func() error
@@ -28,11 +30,11 @@ func measureInterleaved(cases []benchCase, n, warmup int) ([][]time.Duration, er
 	}
 	for i := 0; i < n; i++ {
 		for j, c := range cases {
-			start := time.Now()
+			start := clock()
 			if err := c.fn(); err != nil {
 				return nil, err
 			}
-			results[j] = append(results[j], time.Since(start))
+			results[j] = append(results[j], clock().Sub(start))
 		}
 	}
 	return results, nil
@@ -68,11 +70,11 @@ func measure(n, warmup int, fn func() error) ([]time.Duration, error) {
 	}
 	samples := make([]time.Duration, 0, n)
 	for i := 0; i < n; i++ {
-		start := time.Now()
+		start := clock()
 		if err := fn(); err != nil {
 			return nil, err
 		}
-		samples = append(samples, time.Since(start))
+		samples = append(samples, clock().Sub(start))
 	}
 	return samples, nil
 }

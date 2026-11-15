@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"reflect"
 	"strings"
 	"testing"
 	"time"
@@ -61,18 +62,34 @@ func TestMeasureStopsOnError(t *testing.T) {
 }
 
 func TestMeasurePreservesExecutionOrder(t *testing.T) {
-	calls := 0
+	originalClock := clock
+	defer func() { clock = originalClock }()
+
+	offsets := []time.Duration{
+		0,
+		time.Millisecond,
+		time.Millisecond,
+		3 * time.Millisecond,
+		3 * time.Millisecond,
+		6 * time.Millisecond,
+	}
+	next := 0
+	clock = func() time.Time {
+		current := time.Unix(0, 0).Add(offsets[next])
+		next++
+		return current
+	}
+
 	samples, err := measure(3, 0, func() error {
-		calls++
-		time.Sleep(time.Duration(calls) * time.Millisecond)
 		return nil
 	})
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	if !(samples[0] < samples[1] && samples[1] < samples[2]) {
-		t.Fatalf("samples are not in execution order: %v", samples)
+	want := []time.Duration{time.Millisecond, 2 * time.Millisecond, 3 * time.Millisecond}
+	if !reflect.DeepEqual(samples, want) {
+		t.Fatalf("samples = %v, want %v", samples, want)
 	}
 }
 
