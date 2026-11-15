@@ -1,0 +1,46 @@
+OpenSSL: OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+cryptography: 41.0.7
+Go: go version go1.27.4 linux/amd64
+PASS ed25519 ours keygen
+PASS ed25519 ours keyid
+PASS ed25519 ours sign
+PASS ed25519 extract ours bundle
+PASS ed25519 Python verifies ours
+PASS ed25519 OpenSSL verifies ours
+PASS ed25519 external keygen
+PASS ed25519 external public key
+PASS ed25519 external manifest
+PASS ed25519 external sign
+PASS ed25519 external bundle
+PASS ed25519 external trust
+PASS ed25519 sealix verifies external
+PASS ecdsa-p256-sha2 ours keygen
+PASS ecdsa-p256-sha2 ours keyid
+PASS ecdsa-p256-sha2 ours sign
+PASS ecdsa-p256-sha2 extract ours bundle
+PASS ecdsa-p256-sha2 Python verifies ours
+PASS ecdsa-p256-sha2 DER conversion
+PASS ecdsa-p256-sha2 OpenSSL verifies ours
+PASS ecdsa-p256-sha2 external keygen
+PASS ecdsa-p256-sha2 external public key
+PASS ecdsa-p256-sha2 external manifest
+PASS ecdsa-p256-sha2 external sign
+PASS ecdsa-p256-sha2 external signature conversion
+PASS ecdsa-p256-sha2 external bundle
+PASS ecdsa-p256-sha2 external trust
+PASS ecdsa-p256-sha2 rejects DER signature
+PASS ecdsa-p256-sha2 sealix verifies external
+PASS rsa-pss-sha256 ours keygen
+PASS rsa-pss-sha256 ours keyid
+PASS rsa-pss-sha256 ours sign
+PASS rsa-pss-sha256 extract ours bundle
+PASS rsa-pss-sha256 Python verifies ours
+PASS rsa-pss-sha256 OpenSSL verifies ours
+PASS rsa-pss-sha256 external keygen
+PASS rsa-pss-sha256 external public key
+PASS rsa-pss-sha256 external manifest
+PASS rsa-pss-sha256 external sign
+PASS rsa-pss-sha256 external bundle
+PASS rsa-pss-sha256 external trust
+PASS rsa-pss-sha256 sealix verifies external
+42 lulus, 0 gagal
