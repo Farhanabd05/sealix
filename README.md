@@ -141,6 +141,117 @@ karena penyimpanan trust store memakai `rename`.
 | 1 | Verifikasi ditolak: `FORMAT_ERROR`, `UNSUPPORTED_ALGORITHM`, `KEY_NOT_TRUSTED`, `INVALID_SIGNATURE`, `METADATA_MISMATCH`, atau `ARTIFACT_MISMATCH`. |
 | 2 | Kesalahan pemakaian, I/O, atau lingkungan (`INPUT_ERROR` pada `verify`). |
 
+## Format berkas
+
+### Manifest
+
+JSON dalam satu baris UTF-8, tanpa spasi dan tanpa baris baru, dengan urutan
+field tetap dan ukuran maksimal 16 KiB. Contoh di bawah diberi indentasi hanya
+supaya terbaca:
+
+```json
+{
+  "schema": "minisign-manifest/v1",
+  "package": "contoh-app",
+  "version": "1.0.0",
+  "algorithm": "ed25519",
+  "keyid": "<64 karakter heksadesimal>",
+  "artifact": {
+    "name": "contoh-app.zip",
+    "size": 1048576,
+    "sha256": "<64 karakter heksadesimal>"
+  }
+}
+```
+
+| Field | Aturan |
+|---|---|
+| `schema` | `minisign-manifest/v1` |
+| `package` | `[a-z0-9][a-z0-9._-]{0,63}` |
+| `version` | `[A-Za-z0-9][A-Za-z0-9._+-]{0,63}` |
+| `algorithm` | nama profil |
+| `keyid` | SHA-256 dari DER SPKI kunci publik, heksadesimal huruf kecil |
+| `artifact.name` | nama berkas tanpa direktori, `[A-Za-z0-9][A-Za-z0-9._-]{0,127}` |
+| `artifact.size` | bilangan bulat 0 sampai 2^53 - 1 |
+| `artifact.sha256` | SHA-256 isi artefak, heksadesimal huruf kecil |
+
+Field tambahan, field ganda, nilai `null`, dan tipe yang salah ditolak. Saat
+verifikasi, manifest diurai lalu diserialisasi ulang dan dibandingkan
+byte per byte dengan manifest di bundle.
+
+### Bundle
+
+```json
+{"schema":"minisign-bundle/v1","manifest_b64":"...","signature_b64":"..."}
+```
+
+Maksimal 64 KiB. Isi `manifest_b64` dan `signature_b64` memakai Base64 standar
+(RFC 4648) dengan padding. Urutan field dan spasi pada bundle bebas, selama
+kedua string Base64 tidak berubah.
+
+### Kunci
+
+| Jenis | Format |
+|---|---|
+| Kunci privat | PKCS#8 PEM, label `PRIVATE KEY` |
+| Kunci publik | SPKI PEM, label `PUBLIC KEY` |
+| RSA | modulus 3072 bit, eksponen publik 65537 |
+| ECDSA | kurva P-256 dengan named curve |
+| Ed25519 | RFC 8410 |
+
+`keyid` dihitung dari DER SPKI hasil ekspor ulang kunci publik, jadi perbedaan
+baris baru atau lebar baris pada berkas PEM tidak mengubahnya.
+
+### Trust store
+
+```json
+{
+  "schema": "minisign-trust/v1",
+  "keys": [
+    {
+      "keyid": "<fingerprint>",
+      "algorithm": "ed25519",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n",
+      "packages": ["contoh-app"]
+    }
+  ]
+}
+```
+
+`public_key_pem` berisi teks PEM, bukan path berkas. Daftar `packages` tidak
+boleh kosong, berisi duplikat, atau memakai wildcard. Ukuran berkas maksimal
+1 MiB. Isi trust store hanya berubah lewat `trust add` dan `trust remove`.
+
+## Pemetaan profil ke API pustaka
+
+Semua fungsi berasal dari standard library Go. SHA-256 atas manifest dihitung
+tepat satu kali, kecuali pada Ed25519 yang menerima manifest langsung.
+
+| Profil | Keygen | Sign | Verify |
+|---|---|---|---|
+| `rsa-pss-sha256` | `rsa.GenerateKey(rand.Reader, 3072)` | `rsa.SignPSS` dengan `crypto.SHA256` dan `SaltLength: 32` | `rsa.VerifyPSS` dengan `SaltLength: 32` |
+| `ecdsa-p256-sha2` | `ecdsa.GenerateKey(elliptic.P256(), rand.Reader)` | `ecdsa.SignASN1`, lalu DER diurai dengan `asn1.Unmarshal` menjadi `r` dan `s` (masing-masing 32 byte) | `r` dan `s` disusun kembali dengan `asn1.Marshal`, lalu `ecdsa.VerifyASN1` |
+| `ed25519` | `ed25519.GenerateKey(rand.Reader)` | `ed25519.Sign` | `ed25519.Verify` |
+
+Tanda tangan RSA-PSS berukuran 384 byte. Tanda tangan ECDSA disimpan sebagai
+`r` diikuti `s` (64 byte), bukan DER. ECDSA dan RSA-PSS memakai `crypto/rand`
+sebagai sumber keacakan (nonce dan salt), sedangkan Ed25519 bersifat
+deterministik.
+
+Kunci dan fingerprint:
+
+| Operasi | Fungsi |
+|---|---|
+| Simpan kunci privat | `x509.MarshalPKCS8PrivateKey` dan `pem.EncodeToMemory` |
+| Simpan kunci publik | `x509.MarshalPKIXPublicKey` dan `pem.EncodeToMemory` |
+| Baca kunci privat | `pem.Decode` dan `x509.ParsePKCS8PrivateKey` |
+| Baca kunci publik | `pem.Decode` dan `x509.ParsePKIXPublicKey` |
+| Fingerprint | `sha256.Sum256` atas hasil `x509.MarshalPKIXPublicKey` |
+
+Setelah dibaca, parameter kunci diperiksa lagi (RSA 3072 bit dengan eksponen
+65537, ECDSA pada P-256), karena parser x509 menerima kunci dengan parameter
+lain.
+
 ## Mengulang pengujian
 
 | Pengujian | Perintah |
