@@ -1,5 +1,5 @@
 temp.go
-*.key.pem
+*.pem
 *.bundle.json
 *.marker
 .env
@@ -8,3 +8,4 @@ temp.go
 /dist/
 bench/data/
 /bin/
+*.exe
