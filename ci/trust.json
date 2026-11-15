@@ -1,4 +1,13 @@
 {
-  "schema": "minisign-trust/v1",
-  "keys": []
+ "schema": "minisign-trust/v1",
+ "keys": [
+  {
+   "keyid": "f216f1c5fa04b09d6c78e69a864543be15ed8400881e7abb855b0e964c7c5241",
+   "algorithm": "ed25519",
+   "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEADL/GAjGit69MJ22X/kNASE7juce/FYWdtDUiMRJsRWU=\n-----END PUBLIC KEY-----\n",
+   "packages": [
+    "contoh-app"
+   ]
+  }
+ ]
 }
