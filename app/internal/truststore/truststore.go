@@ -15,6 +15,8 @@ import (
 	"regexp"
 	"slices"
 	"strings"
+	"io"
+	"runtime"
 )
 
 const Schema = "minisign-trust/v1"
@@ -172,7 +174,7 @@ func Load(path string) (*Store, error) {
 
 	defer f.Close()
 
-	data, err := os.ReadFile(path)
+	data, err := io.ReadAll(io.LimitReader(f, MaxSize+1))
 	if err != nil {
 		return nil, err
 	}
@@ -298,7 +300,11 @@ func (s *Store) Save(path string) error {
 		return err
 	}
 
-	if d, err := os.Open(dir); err == nil {
+	if runtime.GOOS != "windows" {
+		d, err := os.Open(dir)
+		if err != nil {
+			return err
+		}
 		defer d.Close()
 
 		if err := d.Sync(); err != nil {
