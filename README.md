@@ -69,6 +69,88 @@ cd app
 go test ./... -count=1
 ```
 
+## Contoh penggunaan
+
+Contoh berikut memakai artefak `contoh-app.zip`, paket `contoh-app`, versi `1.0.0`.
+
+### keygen
+
+```sh
+sealix keygen --algorithm ed25519 --out keys/publisher
+```
+
+Menulis `keys/publisher.key.pem` dan `keys/publisher.pub.pem`, lalu mencetak
+fingerprint kunci publik. Profil lain: `ecdsa-p256-sha2` dan `rsa-pss-sha256`.
+Berkas yang sudah ada tidak ditimpa kecuali dengan `--force`.
+
+### trust add
+
+```sh
+sealix trust add --key keys/publisher.pub.pem --package contoh-app --store trust.json
+```
+
+Membuat `trust.json` jika belum ada, lalu mencetak fingerprint, algoritma, dan
+paket yang diizinkan. Menjalankan perintah yang sama dua kali tidak mengubah
+apa pun. Kunci yang sama untuk paket lain menambah daftar paket pada entri yang
+ada. Opsi `--keyid` menolak kunci jika fingerprint-nya berbeda dari yang
+diharapkan.
+
+### sign
+
+```sh
+sealix sign --file contoh-app.zip --package contoh-app --version 1.0.0 \
+  --key keys/publisher.key.pem --out release.json
+```
+
+Menulis bundle ke `release.json`. Profil algoritma ditentukan dari kunci privat.
+Bundle yang sudah ada tidak ditimpa kecuali dengan `--force`.
+
+### verify
+
+```sh
+sealix verify --file contoh-app.zip --bundle release.json \
+  --trust-store trust.json --package contoh-app --version 1.0.0 --json
+```
+
+Keluarannya satu objek JSON di stdout:
+
+```json
+{"valid":true,"status":"OK","message":"signature, metadata, dan artefak valid","algorithm":"ed25519","keyid":"<fingerprint>","package":"contoh-app","version":"1.0.0"}
+```
+
+Tanpa `--json`, hasilnya satu baris teks. Pesan kesalahan ditulis ke stderr.
+Jika `--version` tidak sama dengan isi manifest, status menjadi
+`METADATA_MISMATCH`.
+
+### trust list dan trust remove
+
+```sh
+sealix trust list --store trust.json
+sealix trust remove --keyid <fingerprint> --store trust.json
+```
+
+`trust remove` dengan keyid yang tidak ada keluar dengan kode 2. Di dalam
+kontainer, mount direktori yang memuat trust store, bukan berkas tunggal,
+karena penyimpanan trust store memakai `rename`.
+
+### Exit code
+
+| Kode | Arti |
+|---|---|
+| 0 | Berhasil. Pada `verify`: `status` `OK`. |
+| 1 | Verifikasi ditolak: `FORMAT_ERROR`, `UNSUPPORTED_ALGORITHM`, `KEY_NOT_TRUSTED`, `INVALID_SIGNATURE`, `METADATA_MISMATCH`, atau `ARTIFACT_MISMATCH`. |
+| 2 | Kesalahan pemakaian, I/O, atau lingkungan (`INPUT_ERROR` pada `verify`). |
+
+## Mengulang pengujian
+
+| Pengujian | Perintah |
+|---|---|
+| Unit test, U01, dan U14 | `cd app && go test ./... -count=1` |
+| Interop dengan OpenSSL dan Python | `bash test/interop/interop.sh` |
+| Tes negatif U02 sampai U13 | `make negative` |
+| Benchmark | `cd app && go run ./cmd/bench -bin ../bin/sealix -out ../bench/results/run1` |
+| Integrasi C01 sampai C05 pada image | `bash test/integration/run.sh <image> <algoritma> <folder-keluaran>` |
+
 ## Image kontainer
 
 TODO: dokumentasikan cara menarik image setelah tag rilis dan digest image
