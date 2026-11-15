@@ -1,16 +1,18 @@
-ARG GO_IMAGE=golang:1.24
 
-FROM --platform=linux/amd64 ${GO_IMAGE} AS build
+FROM --platform=linux/amd64 golang:1.24.13-bookworm@sha256:1a6d4452c65dea36aac2e2d606b01b4a029ec90cc1ae53890540ce6173ea77ac AS build
 
-WORKDIR /app
+WORKDIR /src/app
 
-COPY go.mod ./
-COPY cmd ./cmd
-COPY internal ./internal
+COPY app/go.mod ./
+COPY app/cmd ./cmd
+COPY app/internal ./internal
 
 ARG VERSION=dev 
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="-s -w -X main.version=${VERSION}" -o /sealix ./cmd/sealix
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -trimpath -buildvcs=false \
+    -ldflags="-s -w -X main.version=${VERSION}" \
+    -o /sealix ./cmd/sealix
 
 FROM scratch
 
