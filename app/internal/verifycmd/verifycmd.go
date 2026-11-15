@@ -16,6 +16,7 @@ import (
 	"os"
 	"path/filepath"
 	"slices"
+	"errors"
 )
 
 type Report struct {
@@ -26,6 +27,24 @@ type Report struct {
 	KeyID     *string       `json:"keyid"`
 	Package   *string       `json:"package"`
 	Version   *string       `json:"version"`
+}
+
+func readBoundedInput(path string, max int) ([]byte, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	info, err := f.Stat()
+	if err != nil {
+		return nil, err
+	}
+	if !info.Mode().IsRegular() {
+		return nil, fmt.Errorf("%s bukan file reguler", path)
+	}
+
+	return io.ReadAll(io.LimitReader(f, int64(max)+1))
 }
 
 func Run(args []string, out io.Writer, errOut io.Writer) int {
@@ -71,6 +90,9 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 
 	// INPUT ERROR
 	if err := f.Parse(args); err != nil {
+		if errors.Is(err, flag.ErrHelp) {
+			return 0
+		}
 		return emit(result.InputError, err.Error())
 	}
 
@@ -94,12 +116,20 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 
 	defer artifact.Close()
 
-	b, err := os.ReadFile(*bundlePath)
+	info, err := artifact.Stat()
 	if err != nil {
 		return emit(result.InputError, err.Error())
 	}
+	if !info.Mode().IsRegular() {
+		return emit(result.InputError, "artefak bukan file reguler")
+	}
 
-	trustData, err := os.ReadFile(*trust)
+	b, err := readBoundedInput(*bundlePath, bundle.MaxSize)
+	if err != nil {
+		return emit(result.InputError, err.Error())
+	}
+	
+	trustData, err := readBoundedInput(*trust, truststore.MaxSize)
 	if err != nil {
 		return emit(result.InputError, err.Error())
 	}
@@ -114,16 +144,16 @@ func Run(args []string, out io.Writer, errOut io.Writer) int {
 	if err != nil {
 		return emit(result.FormatError, err.Error())
 	}
+	
+	report.Algorithm = &m.Algorithm
+	report.KeyID = &m.KeyID
+	report.Package = &m.Package
+	report.Version = &m.Version
 
 	store, err := truststore.Parse(trustData)
 	if err != nil {
 		return emit(result.FormatError, err.Error())
 	}
-
-	report.Algorithm = &m.Algorithm
-	report.KeyID = &m.KeyID
-	report.Package = &m.Package
-	report.Version = &m.Version
 
 	// UNSUPPORTED ALGO
 	alg, ok := sigalg.Lookup(m.Algorithm)

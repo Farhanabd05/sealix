@@ -41,7 +41,7 @@ func Run(
 			"subcommand tidak dikenali: %s\n",
 			args[0],
 		)
-		help(out)
+		help(errOut)
 		return 2
 	}
 }
