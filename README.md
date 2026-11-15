@@ -264,5 +264,26 @@ lain.
 
 ## Image kontainer
 
-TODO: dokumentasikan cara menarik image setelah tag rilis dan digest image
-tersedia.
+Image rilis dipublikasikan di GitHub Container Registry dan bisa ditarik tanpa
+login.
+
+| Versi program | Tag repositori | Tag image | Digest image |
+|---|---|---|---|
+| 1.0.0 | `v1.0.0` | `ghcr.io/farhanabd05/sealix:v1.0.0` | `sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a` |
+
+Pipeline mengunci image berdasarkan digest:
+
+    IMAGE=ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+    docker pull "$IMAGE"
+    docker run --rm "$IMAGE" --version
+
+Contoh `verify` di runner, dengan artefak di `dist/` dan trust store di `ci/`:
+
+    docker run --rm --network none --user "$(id -u):$(id -g)" \
+      -v "$PWD/dist:/input:ro" -v "$PWD/out:/output" \
+      -v "$PWD/ci/trust.json:/trust.json:ro" "$IMAGE" verify \
+      --file /input/contoh-app.zip --bundle /output/release.json \
+      --trust-store /trust.json --package contoh-app --version 1.0.0 --json
+
+Kunci privat diberikan lewat berkas sementara yang di-mount `:ro`, tidak pernah
+masuk ke image. Bukti run CI ada di [`docs/evidence/ci`](docs/evidence/ci/ringkasan.md).

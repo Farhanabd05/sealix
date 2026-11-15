@@ -1,0 +1,596 @@
+integration (rsa-pss-sha256)	Set up job	﻿2026-11-15T14:29:50.3557689Z Current runner version: '2.338.2'
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3594773Z ##[group]Runner Image Provisioner
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3596148Z Hosted Compute Agent
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3596988Z Version: 20261103.629
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3597900Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3598964Z Build Date: 2026-11-03T17:26:59Z
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3599867Z Worker ID: {5cc36fc4-881c-449e-a76d-7f5866ecc2e6}
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3600905Z Region: westus2
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3601630Z Cloud: Azure
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3602365Z ##[endgroup]
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3604794Z ##[group]Operating System
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3605664Z Ubuntu
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3606438Z 26.04.1
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3607127Z LTS
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3607870Z ##[endgroup]
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3608769Z ##[group]Runner Image
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3609585Z Image: ubuntu-26.04
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3610421Z Version: 20261111.196.1
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3611821Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3614526Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3615840Z ##[endgroup]
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3617376Z ##[group]GITHUB_TOKEN Permissions
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3620076Z Contents: read
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3620981Z Metadata: read
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3621725Z ##[endgroup]
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3624971Z Secret source: Actions
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3626408Z Cache mode: write
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.3627300Z Prepare workflow directory
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.4241285Z Prepare all required actions
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.4314243Z Getting action download info
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.7931215Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:50.9674127Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+integration (rsa-pss-sha256)	Set up job	2026-11-15T14:29:51.2368698Z Complete job name: integration (rsa-pss-sha256)
+integration (rsa-pss-sha256)	Run actions/checkout@v4	﻿2026-11-15T14:29:51.3195836Z ##[group]Run actions/checkout@v4
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3196806Z with:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3197330Z   repository: Farhanabd05/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3201109Z   token: ***
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3201611Z   ssh-strict: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3202100Z   ssh-user: git
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3202644Z   persist-credentials: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3203523Z   clean: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3204105Z   sparse-checkout-cone-mode: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3204706Z   fetch-depth: 1
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3205205Z   fetch-tags: false
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3205732Z   show-progress: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3206238Z   lfs: false
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3206782Z   submodules: false
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3207309Z   set-safe-directory: true
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3207881Z   allow-unsafe-pr-checkout: false
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.3208659Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6282944Z Syncing repository: Farhanabd05/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6286412Z ##[group]Getting Git version info
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6287694Z Working directory is '/home/runner/work/sealix/sealix'
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6290719Z [command]/usr/bin/git version
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6339526Z git version 2.56.1
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6406624Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6430091Z Temporarily overriding HOME='/home/runner/work/_temp/16d341b4-e1df-4216-a574-eda3a2e44f4a' before making global git config changes
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6432287Z Adding repository directory to the temporary git global config as a safe directory
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6434601Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6497302Z Deleting the contents of '/home/runner/work/sealix/sealix'
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6499318Z ##[group]Initializing the repository
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6500567Z [command]/usr/bin/git init /home/runner/work/sealix/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6634870Z hint: Using 'master' as the name for the initial branch. This default branch name
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6638049Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6640135Z hint: to use in all of your new repositories, which will suppress this warning,
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6641312Z hint: call:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6642059Z hint:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6642970Z hint: 	git config --global init.defaultBranch <name>
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6644243Z hint:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6645315Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6646735Z hint: 'development'. The just-created branch can be renamed via this command:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6648085Z hint:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6648849Z hint: 	git branch -m <name>
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6649690Z hint:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6650734Z hint: Disable this message with "git config set advice.defaultBranchName false"
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6668587Z Initialized empty Git repository in /home/runner/work/sealix/sealix/.git/
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6691137Z [command]/usr/bin/git remote add origin https://github.com/Farhanabd05/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6838018Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6839576Z ##[group]Disabling automatic garbage collection
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6840783Z [command]/usr/bin/git config --local gc.auto 0
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6904792Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6906759Z ##[group]Setting up auth
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6927330Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.6988014Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.7563777Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.7696884Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.7920682Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.7955336Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.8180960Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.8223530Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.8226034Z ##[group]Fetching the repository
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:51.8238388Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d684de7871faca6297c91abd8e3987528a280f7f:refs/remotes/origin/main
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1505637Z From https://github.com/Farhanabd05/sealix
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1508872Z  * [new ref]         d684de7871faca6297c91abd8e3987528a280f7f -> origin/main
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1515893Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1518717Z ##[group]Determining the checkout info
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1521704Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1523748Z [command]/usr/bin/git sparse-checkout disable
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1588322Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1627460Z ##[group]Checking out the ref
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1630993Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1739626Z Switched to a new branch 'main'
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1748046Z branch 'main' set up to track 'origin/main'.
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1754673Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1798400Z [command]/usr/bin/git log -1 --format=%H
+integration (rsa-pss-sha256)	Run actions/checkout@v4	2026-11-15T14:29:52.1825135Z d684de7871faca6297c91abd8e3987528a280f7f
+integration (rsa-pss-sha256)	Validate image digest	﻿2026-11-15T14:29:52.2115532Z ##[group]Run set -euo pipefail
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2117040Z [36;1mset -euo pipefail[0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2118262Z [36;1m[0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2119294Z [36;1m[[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]][0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2121065Z [36;1m[0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2122748Z [36;1mecho "IMAGE=ghcr.io/${REPOSITORY,,}@${DIGEST}" \[0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2125398Z [36;1m  >> "$GITHUB_ENV"[0m
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2167774Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2169878Z env:
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2171483Z   DIGEST: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2173658Z   REPOSITORY: Farhanabd05/sealix
+integration (rsa-pss-sha256)	Validate image digest	2026-11-15T14:29:52.2174866Z ##[endgroup]
+integration (rsa-pss-sha256)	Run C01-C05 on published image	﻿2026-11-15T14:29:52.2366433Z ##[group]Run set -euo pipefail
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2367653Z [36;1mset -euo pipefail[0m
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2368764Z [36;1m[0m
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2370170Z [36;1mbash test/integration/run.sh \[0m
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2371591Z [36;1m  "$IMAGE" "$ALGORITHM" "out/$ALGORITHM"[0m
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2402948Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2404811Z env:
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2406716Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2408813Z   ALGORITHM: rsa-pss-sha256
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.2409845Z ##[endgroup]
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.3738103Z Unable to find image 'ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a' locally
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:52.8236162Z ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a: Pulling from farhanabd05/sealix
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.2663423Z b41df92666c3: Pulling fs layer
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.2765809Z 44136fa355b3: Already exists
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.4770008Z 5c7213b024eb: Download complete
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.5686972Z b41df92666c3: Download complete
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.5705104Z b41df92666c3: Pull complete
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.5706144Z Digest: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:53.5713362Z Status: Downloaded newer image for ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:57.1880628Z 48b0fcb55b266f79a880566acbe8f552da41e234e8949b7c8f708d65531a14ca
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:57.3917245Z keyid=48b0fcb55b266f79a880566acbe8f552da41e234e8949b7c8f708d65531a14ca algorithm=rsa-pss-sha256 package=contoh-app created=true
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:57.5708539Z bundle ditulis ke /work/release.json (algoritma rsa-pss-sha256, keyid 48b0fcb55b266f79a880566acbe8f552da41e234e8949b7c8f708d65531a14ca)
+integration (rsa-pss-sha256)	Run C01-C05 on published image	2026-11-15T14:29:57.7914805Z PASS C01 (rsa-pss-sha256): OK
+integration (rsa-pss-sha256)	Record run URL	﻿2026-11-15T14:29:57.8022470Z ##[group]Run mkdir -p "out/$ALGORITHM"
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8022925Z [36;1mmkdir -p "out/$ALGORITHM"[0m
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8023579Z [36;1m[0m
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8023948Z [36;1mprintf '%s\n' \[0m
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8024431Z [36;1m  "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \[0m
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8024960Z [36;1m  > "out/$ALGORITHM/run-url.txt"[0m
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8059645Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8060157Z env:
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8060747Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8061311Z   ALGORITHM: rsa-pss-sha256
+integration (rsa-pss-sha256)	Record run URL	2026-11-15T14:29:57.8061644Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	﻿2026-11-15T14:29:57.8229173Z ##[group]Run actions/upload-artifact@v4
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8229587Z with:
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8229922Z   name: evidence-rsa-pss-sha256
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8230332Z   path: out/rsa-pss-sha256/
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8230783Z   if-no-files-found: warn
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8231204Z   compression-level: 6
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8231537Z   overwrite: false
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8231890Z   include-hidden-files: false
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8232257Z env:
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8232744Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8233552Z ##[endgroup]
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.9960340Z (node:2498) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.9962062Z (Use `node --trace-deprecation ...` to show where the warning was created)
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0264333Z With the provided path, there will be 5 files uploaded
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0269245Z Artifact name is valid!
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0270899Z Root directory input is valid!
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.4324247Z Beginning upload of artifact content to blob storage
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.4643917Z (node:2498) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.7701315Z Uploaded bytes 1005
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.8500573Z Finished uploading artifact content to blob storage!
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.8502147Z SHA256 digest of uploaded artifact zip is 0233b9d8649b194bd15b2816a0c3c80ca73cea7920883c406a6d0b9474bc2646
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.8503502Z Finalizing artifact upload
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.2574925Z Artifact evidence-rsa-pss-sha256.zip successfully finalized. Artifact ID 14165798433
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.2576601Z Artifact evidence-rsa-pss-sha256 has been successfully uploaded! Final size is 1005 bytes. Artifact ID is 14165798433
+integration (rsa-pss-sha256)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.2582754Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724647967/artifacts/14165798433
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	﻿2026-11-15T14:29:59.2799143Z Post job cleanup.
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3764509Z [command]/usr/bin/git version
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3834391Z git version 2.56.1
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3914821Z Temporarily overriding HOME='/home/runner/work/_temp/2fd2af2f-f13e-492d-b123-d0c14ef0da16' before making global git config changes
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3916178Z Adding repository directory to the temporary git global config as a safe directory
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3917457Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.3964818Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4031852Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4436753Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4475191Z http.https://github.com/.extraheader
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4523889Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4605132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5030097Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (rsa-pss-sha256)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5104411Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (rsa-pss-sha256)	Complete job	﻿2026-11-15T14:29:59.5463894Z Cleaning up orphan processes
+integration (rsa-pss-sha256)	Complete job	2026-11-15T14:29:59.5834647Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration (ed25519)	Set up job	﻿2026-11-15T14:29:50.4621861Z Current runner version: '2.338.2'
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4660115Z ##[group]Runner Image Provisioner
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4661808Z Hosted Compute Agent
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4662780Z Version: 20261103.629
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4663972Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4665245Z Build Date: 2026-11-03T17:26:59Z
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4666467Z Worker ID: {a0220515-42b4-486c-9c75-5c088bb7f421}
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4668059Z Region: westus2
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4669506Z Cloud: Azure
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4670672Z ##[endgroup]
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4673352Z ##[group]Operating System
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4674440Z Ubuntu
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4675645Z 26.04.1
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4676558Z LTS
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4677545Z ##[endgroup]
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4678490Z ##[group]Runner Image
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4679729Z Image: ubuntu-26.04
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4681003Z Version: 20261111.196.1
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4682985Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4686235Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4687959Z ##[endgroup]
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4690390Z ##[group]GITHUB_TOKEN Permissions
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4693030Z Contents: read
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4706017Z Metadata: read
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4707073Z ##[endgroup]
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4710187Z Secret source: Actions
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4711987Z Cache mode: write
+integration (ed25519)	Set up job	2026-11-15T14:29:50.4713747Z Prepare workflow directory
+integration (ed25519)	Set up job	2026-11-15T14:29:50.5320284Z Prepare all required actions
+integration (ed25519)	Set up job	2026-11-15T14:29:50.5394631Z Getting action download info
+integration (ed25519)	Set up job	2026-11-15T14:29:50.8801360Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+integration (ed25519)	Set up job	2026-11-15T14:29:51.0251078Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+integration (ed25519)	Set up job	2026-11-15T14:29:51.2231804Z Complete job name: integration (ed25519)
+integration (ed25519)	Run actions/checkout@v4	﻿2026-11-15T14:29:51.3108564Z ##[group]Run actions/checkout@v4
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3109991Z with:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3110467Z   repository: Farhanabd05/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3114564Z   token: ***
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3115027Z   ssh-strict: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3115485Z   ssh-user: git
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3115936Z   persist-credentials: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3116436Z   clean: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3116900Z   sparse-checkout-cone-mode: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3117453Z   fetch-depth: 1
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3117899Z   fetch-tags: false
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3118355Z   show-progress: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3118955Z   lfs: false
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3119388Z   submodules: false
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3119853Z   set-safe-directory: true
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3120375Z   allow-unsafe-pr-checkout: false
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.3121166Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6882090Z Syncing repository: Farhanabd05/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6885065Z ##[group]Getting Git version info
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6886601Z Working directory is '/home/runner/work/sealix/sealix'
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6889404Z [command]/usr/bin/git version
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6890673Z git version 2.56.1
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6933149Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6961130Z Temporarily overriding HOME='/home/runner/work/_temp/cbf63936-30ae-4f04-91a9-6eab4c0f6b49' before making global git config changes
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6963988Z Adding repository directory to the temporary git global config as a safe directory
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.6969630Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7091698Z Deleting the contents of '/home/runner/work/sealix/sealix'
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7094172Z ##[group]Initializing the repository
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7095750Z [command]/usr/bin/git init /home/runner/work/sealix/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7273156Z hint: Using 'master' as the name for the initial branch. This default branch name
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7290514Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7297024Z hint: to use in all of your new repositories, which will suppress this warning,
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7298969Z hint: call:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7300443Z hint:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7301769Z hint: 	git config --global init.defaultBranch <name>
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7332049Z hint:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7333356Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7334873Z hint: 'development'. The just-created branch can be renamed via this command:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7335995Z hint:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7336924Z hint: 	git branch -m <name>
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7337862Z hint:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7339284Z hint: Disable this message with "git config set advice.defaultBranchName false"
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7340980Z Initialized empty Git repository in /home/runner/work/sealix/sealix/.git/
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7344433Z [command]/usr/bin/git remote add origin https://github.com/Farhanabd05/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7426511Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7429482Z ##[group]Disabling automatic garbage collection
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7433555Z [command]/usr/bin/git config --local gc.auto 0
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7521075Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7522968Z ##[group]Setting up auth
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7525177Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.7615106Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.8396662Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.8401325Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.8681781Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.8710552Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.9037070Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.9074593Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.9076691Z ##[group]Fetching the repository
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:51.9087432Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d684de7871faca6297c91abd8e3987528a280f7f:refs/remotes/origin/main
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2459244Z From https://github.com/Farhanabd05/sealix
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2461396Z  * [new ref]         d684de7871faca6297c91abd8e3987528a280f7f -> origin/main
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2464955Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2466551Z ##[group]Determining the checkout info
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2468187Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2477093Z [command]/usr/bin/git sparse-checkout disable
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2581170Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2680217Z ##[group]Checking out the ref
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2682320Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2875753Z Switched to a new branch 'main'
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2890679Z branch 'main' set up to track 'origin/main'.
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2895978Z ##[endgroup]
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2952217Z [command]/usr/bin/git log -1 --format=%H
+integration (ed25519)	Run actions/checkout@v4	2026-11-15T14:29:52.2984212Z d684de7871faca6297c91abd8e3987528a280f7f
+integration (ed25519)	Validate image digest	﻿2026-11-15T14:29:52.3299800Z ##[group]Run set -euo pipefail
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3301278Z [36;1mset -euo pipefail[0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3302388Z [36;1m[0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3303370Z [36;1m[[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]][0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3304719Z [36;1m[0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3305863Z [36;1mecho "IMAGE=ghcr.io/${REPOSITORY,,}@${DIGEST}" \[0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3307372Z [36;1m  >> "$GITHUB_ENV"[0m
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3367640Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3369536Z env:
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3371013Z   DIGEST: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3372930Z   REPOSITORY: Farhanabd05/sealix
+integration (ed25519)	Validate image digest	2026-11-15T14:29:52.3374052Z ##[endgroup]
+integration (ed25519)	Run C01-C05 on published image	﻿2026-11-15T14:29:52.3592988Z ##[group]Run set -euo pipefail
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3594191Z [36;1mset -euo pipefail[0m
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3595195Z [36;1m[0m
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3596093Z [36;1mbash test/integration/run.sh \[0m
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3597443Z [36;1m  "$IMAGE" "$ALGORITHM" "out/$ALGORITHM"[0m
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3649047Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3650516Z env:
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3652309Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3654484Z   ALGORITHM: ed25519
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.3655372Z ##[endgroup]
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.5261771Z Unable to find image 'ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a' locally
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:52.9216712Z ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a: Pulling from farhanabd05/sealix
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.2979666Z b41df92666c3: Pulling fs layer
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.3312733Z 44136fa355b3: Already exists
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.5313496Z b41df92666c3: Download complete
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.5317955Z 5c7213b024eb: Download complete
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.5638187Z b41df92666c3: Pull complete
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.5642832Z Digest: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.5644435Z Status: Downloaded newer image for ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:53.9251637Z af0c97452cf769c7fd8b342584db9802a63acde5f67c96d4c6845331f732eba0
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:54.1381598Z keyid=af0c97452cf769c7fd8b342584db9802a63acde5f67c96d4c6845331f732eba0 algorithm=ed25519 package=contoh-app created=true
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:54.3313228Z bundle ditulis ke /work/release.json (algoritma ed25519, keyid af0c97452cf769c7fd8b342584db9802a63acde5f67c96d4c6845331f732eba0)
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:54.5868190Z PASS C01 (ed25519): OK
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:54.7563107Z 1caddee90cacba78dc8ce643f04978b0dfa7dc2b6badec3c472039055b2f44df
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:54.9436632Z keyid=1caddee90cacba78dc8ce643f04978b0dfa7dc2b6badec3c472039055b2f44df algorithm=ed25519 package=contoh-app created=true
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:55.1373778Z bundle ditulis ke /work/release.json (algoritma ed25519, keyid 1caddee90cacba78dc8ce643f04978b0dfa7dc2b6badec3c472039055b2f44df)
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:55.3896552Z PASS C02 (ed25519): ARTIFACT_MISMATCH
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:55.5473592Z d83e88af115e954f3d7049b323fb2c58033247d30967d0d8857b7a2c4e67ae8e
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:55.7482530Z keyid=d83e88af115e954f3d7049b323fb2c58033247d30967d0d8857b7a2c4e67ae8e algorithm=ed25519 package=contoh-app created=true
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:55.9461543Z bundle ditulis ke /work/release.json (algoritma ed25519, keyid d83e88af115e954f3d7049b323fb2c58033247d30967d0d8857b7a2c4e67ae8e)
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:56.1930061Z PASS C03 (ed25519): KEY_NOT_TRUSTED
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:56.3495602Z e36b91f349d173a683b4baf0b2ed92c83edb743d3d2379c2215c24a4153d505a
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:56.5505465Z keyid=e36b91f349d173a683b4baf0b2ed92c83edb743d3d2379c2215c24a4153d505a algorithm=ed25519 package=contoh-app created=true
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:56.7465540Z bundle ditulis ke /work/release.json (algoritma ed25519, keyid e36b91f349d173a683b4baf0b2ed92c83edb743d3d2379c2215c24a4153d505a)
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.0013561Z PASS C04 (ed25519): INPUT_ERROR
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.1533477Z 30c3bb8da382fc5057aed0e492c7295665c963caed6c25b669bf9e20256da2d5
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.3651349Z keyid=30c3bb8da382fc5057aed0e492c7295665c963caed6c25b669bf9e20256da2d5 algorithm=ed25519 package=contoh-app created=true
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.5521345Z bundle ditulis ke /work/release.json (algoritma ed25519, keyid 30c3bb8da382fc5057aed0e492c7295665c963caed6c25b669bf9e20256da2d5)
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.8104043Z PASS C05 (ed25519): OK
+integration (ed25519)	Run C01-C05 on published image	2026-11-15T14:29:57.8194984Z PASS C05: uid=1001
+integration (ed25519)	Record run URL	﻿2026-11-15T14:29:57.8295210Z ##[group]Run mkdir -p "out/$ALGORITHM"
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8295623Z [36;1mmkdir -p "out/$ALGORITHM"[0m
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8295938Z [36;1m[0m
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8296264Z [36;1mprintf '%s\n' \[0m
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8296705Z [36;1m  "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \[0m
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8297152Z [36;1m  > "out/$ALGORITHM/run-url.txt"[0m
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8349313Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8349711Z env:
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8350151Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8350677Z   ALGORITHM: ed25519
+integration (ed25519)	Record run URL	2026-11-15T14:29:57.8350903Z ##[endgroup]
+integration (ed25519)	Run actions/upload-artifact@v4	﻿2026-11-15T14:29:57.8529025Z ##[group]Run actions/upload-artifact@v4
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8529383Z with:
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8529621Z   name: evidence-ed25519
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8529877Z   path: out/ed25519/
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8530117Z   if-no-files-found: warn
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8530355Z   compression-level: 6
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8530578Z   overwrite: false
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8530804Z   include-hidden-files: false
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8531049Z env:
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8531466Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:57.8531959Z ##[endgroup]
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0394276Z (node:4231) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0404141Z (Use `node --trace-deprecation ...` to show where the warning was created)
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0784001Z With the provided path, there will be 18 files uploaded
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0792162Z Artifact name is valid!
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.0793182Z Root directory input is valid!
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.5039231Z Beginning upload of artifact content to blob storage
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.5847799Z (node:4231) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.8728846Z Uploaded bytes 3632
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.9549571Z Finished uploading artifact content to blob storage!
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.9551110Z SHA256 digest of uploaded artifact zip is 62607b8c65ce35c3e179a7172bde475b945146131b8e12fa04ae3fb7f8e880bd
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:58.9553526Z Finalizing artifact upload
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.3215727Z Artifact evidence-ed25519.zip successfully finalized. Artifact ID 14165971851
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.3220209Z Artifact evidence-ed25519 has been successfully uploaded! Final size is 3632 bytes. Artifact ID is 14165971851
+integration (ed25519)	Run actions/upload-artifact@v4	2026-11-15T14:29:59.3221761Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724647967/artifacts/14165971851
+integration (ed25519)	Post Run actions/checkout@v4	﻿2026-11-15T14:29:59.3453648Z Post job cleanup.
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4439246Z [command]/usr/bin/git version
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4561685Z git version 2.56.1
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4622127Z Temporarily overriding HOME='/home/runner/work/_temp/f8a2996f-a892-48b8-b9a4-15cb76267c15' before making global git config changes
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4638391Z Adding repository directory to the temporary git global config as a safe directory
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4655056Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4709898Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.4800977Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5219881Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5305202Z http.https://github.com/.extraheader
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5326690Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.5623485Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.6172188Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (ed25519)	Post Run actions/checkout@v4	2026-11-15T14:29:59.6176275Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (ed25519)	Complete job	﻿2026-11-15T14:29:59.6769818Z Cleaning up orphan processes
+integration (ed25519)	Complete job	2026-11-15T14:29:59.7187971Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+integration (ecdsa-p256-sha2)	Set up job	﻿2026-11-15T14:29:50.0850867Z Current runner version: '2.338.2'
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0876317Z ##[group]Runner Image Provisioner
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0877166Z Hosted Compute Agent
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0877786Z Version: 20261103.629
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0878678Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0879422Z Build Date: 2026-11-03T17:26:59Z
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0880116Z Worker ID: {5ee49c12-926a-49ec-89f5-8d726bbc81fd}
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0880775Z Region: centralus
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0881294Z Cloud: Azure
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0881806Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0883229Z ##[group]Operating System
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0883882Z Ubuntu
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0884348Z 26.04.1
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0884846Z LTS
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0885395Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0885881Z ##[group]Runner Image
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0886506Z Image: ubuntu-26.04
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0887030Z Version: 20261111.196.1
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0888009Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0890104Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0891067Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0892096Z ##[group]GITHUB_TOKEN Permissions
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0894181Z Contents: read
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0894704Z Metadata: read
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0895193Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0897291Z Secret source: Actions
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0898129Z Cache mode: write
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.0899713Z Prepare workflow directory
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.1249945Z Prepare all required actions
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.1300694Z Getting action download info
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.3950893Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.5465642Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+integration (ecdsa-p256-sha2)	Set up job	2026-11-15T14:29:50.8260361Z Complete job name: integration (ecdsa-p256-sha2)
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	﻿2026-11-15T14:29:50.8828732Z ##[group]Run actions/checkout@v4
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8829540Z with:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8829996Z   repository: Farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8832869Z   token: ***
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8833211Z   ssh-strict: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8833610Z   ssh-user: git
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8833984Z   persist-credentials: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8834375Z   clean: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8834751Z   sparse-checkout-cone-mode: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8835412Z   fetch-depth: 1
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8835780Z   fetch-tags: false
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8836147Z   show-progress: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8836504Z   lfs: false
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8836916Z   submodules: false
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8837287Z   set-safe-directory: true
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8837705Z   allow-unsafe-pr-checkout: false
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:50.8838278Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1197844Z Syncing repository: Farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1200364Z ##[group]Getting Git version info
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1201158Z Working directory is '/home/runner/work/sealix/sealix'
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1202410Z [command]/usr/bin/git version
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1203872Z git version 2.56.1
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1226106Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1234930Z Temporarily overriding HOME='/home/runner/work/_temp/5e5d07a1-9477-439f-98b2-527d5b5a259a' before making global git config changes
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1239020Z Adding repository directory to the temporary git global config as a safe directory
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1240186Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1319572Z Deleting the contents of '/home/runner/work/sealix/sealix'
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1331196Z ##[group]Initializing the repository
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.1332573Z [command]/usr/bin/git init /home/runner/work/sealix/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2525084Z hint: Using 'master' as the name for the initial branch. This default branch name
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2526133Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2527406Z hint: to use in all of your new repositories, which will suppress this warning,
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2528139Z hint: call:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2530003Z hint:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2530689Z hint: 	git config --global init.defaultBranch <name>
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2531359Z hint:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2531958Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2532896Z hint: 'development'. The just-created branch can be renamed via this command:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2533651Z hint:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2534125Z hint: 	git branch -m <name>
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2534630Z hint:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2535264Z hint: Disable this message with "git config set advice.defaultBranchName false"
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2536180Z Initialized empty Git repository in /home/runner/work/sealix/sealix/.git/
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2537891Z [command]/usr/bin/git remote add origin https://github.com/Farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2539900Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2540569Z ##[group]Disabling automatic garbage collection
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2541152Z [command]/usr/bin/git config --local gc.auto 0
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2542254Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2542816Z ##[group]Setting up auth
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2543349Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2545133Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2546748Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2548793Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2602174Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2625514Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2791032Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2821528Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2822598Z ##[group]Fetching the repository
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.2829525Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d684de7871faca6297c91abd8e3987528a280f7f:refs/remotes/origin/main
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5961614Z From https://github.com/Farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5963779Z  * [new ref]         d684de7871faca6297c91abd8e3987528a280f7f -> origin/main
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5966958Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5967868Z ##[group]Determining the checkout info
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5969730Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.5974576Z [command]/usr/bin/git sparse-checkout disable
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6065520Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6087174Z ##[group]Checking out the ref
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6090262Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6163967Z Switched to a new branch 'main'
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6182094Z branch 'main' set up to track 'origin/main'.
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6189806Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6205868Z [command]/usr/bin/git log -1 --format=%H
+integration (ecdsa-p256-sha2)	Run actions/checkout@v4	2026-11-15T14:29:51.6229905Z d684de7871faca6297c91abd8e3987528a280f7f
+integration (ecdsa-p256-sha2)	Validate image digest	﻿2026-11-15T14:29:51.6416426Z ##[group]Run set -euo pipefail
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6416961Z [36;1mset -euo pipefail[0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6417370Z [36;1m[0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6417774Z [36;1m[[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]][0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6418219Z [36;1m[0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6418988Z [36;1mecho "IMAGE=ghcr.io/${REPOSITORY,,}@${DIGEST}" \[0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6419516Z [36;1m  >> "$GITHUB_ENV"[0m
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6451494Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6452048Z env:
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6452652Z   DIGEST: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6453251Z   REPOSITORY: Farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Validate image digest	2026-11-15T14:29:51.6453644Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	﻿2026-11-15T14:29:51.6559945Z ##[group]Run set -euo pipefail
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6560405Z [36;1mset -euo pipefail[0m
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6560776Z [36;1m[0m
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6561174Z [36;1mbash test/integration/run.sh \[0m
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6561638Z [36;1m  "$IMAGE" "$ALGORITHM" "out/$ALGORITHM"[0m
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6584398Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6584906Z env:
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6585602Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6586297Z   ALGORITHM: ecdsa-p256-sha2
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.6586742Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:51.7562138Z Unable to find image 'ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a' locally
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:52.2219471Z ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a: Pulling from farhanabd05/sealix
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:52.7165310Z b41df92666c3: Pulling fs layer
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:52.7716806Z 44136fa355b3: Already exists
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:52.8614286Z 5c7213b024eb: Download complete
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:53.0243510Z b41df92666c3: Download complete
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:53.0247669Z b41df92666c3: Pull complete
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:53.0248838Z Digest: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:53.0250280Z Status: Downloaded newer image for ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:54.0248206Z 197386a4d5477bf602375e84439df6588d637fa11c73791b173f0ace7b62f6c6
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:54.1752957Z keyid=197386a4d5477bf602375e84439df6588d637fa11c73791b173f0ace7b62f6c6 algorithm=ecdsa-p256-sha2 package=contoh-app created=true
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:54.3075948Z bundle ditulis ke /work/release.json (algoritma ecdsa-p256-sha2, keyid 197386a4d5477bf602375e84439df6588d637fa11c73791b173f0ace7b62f6c6)
+integration (ecdsa-p256-sha2)	Run C01-C05 on published image	2026-11-15T14:29:54.4925038Z PASS C01 (ecdsa-p256-sha2): OK
+integration (ecdsa-p256-sha2)	Record run URL	﻿2026-11-15T14:29:54.5010673Z ##[group]Run mkdir -p "out/$ALGORITHM"
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5011094Z [36;1mmkdir -p "out/$ALGORITHM"[0m
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5011377Z [36;1m[0m
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5011652Z [36;1mprintf '%s\n' \[0m
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5012063Z [36;1m  "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \[0m
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5012460Z [36;1m  > "out/$ALGORITHM/run-url.txt"[0m
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5040156Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5040576Z env:
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5041081Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5041564Z   ALGORITHM: ecdsa-p256-sha2
+integration (ecdsa-p256-sha2)	Record run URL	2026-11-15T14:29:54.5041876Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	﻿2026-11-15T14:29:54.5174482Z ##[group]Run actions/upload-artifact@v4
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5174809Z with:
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5175100Z   name: evidence-ecdsa-p256-sha2
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5175459Z   path: out/ecdsa-p256-sha2/
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5175745Z   if-no-files-found: warn
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5176013Z   compression-level: 6
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5176288Z   overwrite: false
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5176599Z   include-hidden-files: false
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5176881Z env:
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5177274Z   IMAGE: ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.5177711Z ##[endgroup]
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.6405389Z (node:2413) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.6406821Z (Use `node --trace-deprecation ...` to show where the warning was created)
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.6605052Z With the provided path, there will be 5 files uploaded
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.6608082Z Artifact name is valid!
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.6609070Z Root directory input is valid!
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.9388393Z Beginning upload of artifact content to blob storage
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:54.9608267Z (node:2413) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.0974312Z Uploaded bytes 1005
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.1380864Z Finished uploading artifact content to blob storage!
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.1381876Z SHA256 digest of uploaded artifact zip is 0d00d7dbbb4ea4ab80210668c85d7647f51af867227ef3c6005e658fff538217
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.1382532Z Finalizing artifact upload
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.5049678Z Artifact evidence-ecdsa-p256-sha2.zip successfully finalized. Artifact ID 14166057511
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.5051027Z Artifact evidence-ecdsa-p256-sha2 has been successfully uploaded! Final size is 1005 bytes. Artifact ID is 14166057511
+integration (ecdsa-p256-sha2)	Run actions/upload-artifact@v4	2026-11-15T14:29:55.5052322Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724647967/artifacts/14166057511
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	﻿2026-11-15T14:29:55.5223248Z Post job cleanup.
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.5949786Z [command]/usr/bin/git version
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6001757Z git version 2.56.1
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6037288Z Temporarily overriding HOME='/home/runner/work/_temp/df901b9c-656d-45cc-a7df-178eadeee12f' before making global git config changes
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6038552Z Adding repository directory to the temporary git global config as a safe directory
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6039483Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6121083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6124848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6491278Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6502077Z http.https://github.com/.extraheader
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6520945Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6523105Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6810875Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+integration (ecdsa-p256-sha2)	Post Run actions/checkout@v4	2026-11-15T14:29:55.6834975Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+integration (ecdsa-p256-sha2)	Complete job	﻿2026-11-15T14:29:55.7107582Z Cleaning up orphan processes
+integration (ecdsa-p256-sha2)	Complete job	2026-11-15T14:29:55.7411709Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,484 @@
+prepare	Set up job	﻿2026-11-15T14:30:27.5970658Z Current runner version: '2.338.2'
+prepare	Set up job	2026-11-15T14:30:27.6008668Z ##[group]Runner Image Provisioner
+prepare	Set up job	2026-11-15T14:30:27.6010067Z Hosted Compute Agent
+prepare	Set up job	2026-11-15T14:30:27.6011411Z Version: 20261103.629
+prepare	Set up job	2026-11-15T14:30:27.6012615Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+prepare	Set up job	2026-11-15T14:30:27.6013925Z Build Date: 2026-11-03T17:26:59Z
+prepare	Set up job	2026-11-15T14:30:27.6015562Z Worker ID: {49141e02-dcfc-4968-8bff-7cc7261e500d}
+prepare	Set up job	2026-11-15T14:30:27.6016889Z Region: southcentralus
+prepare	Set up job	2026-11-15T14:30:27.6017993Z Cloud: Azure
+prepare	Set up job	2026-11-15T14:30:27.6019038Z ##[endgroup]
+prepare	Set up job	2026-11-15T14:30:27.6021296Z ##[group]Operating System
+prepare	Set up job	2026-11-15T14:30:27.6022492Z Ubuntu
+prepare	Set up job	2026-11-15T14:30:27.6023404Z 26.04.1
+prepare	Set up job	2026-11-15T14:30:27.6024738Z LTS
+prepare	Set up job	2026-11-15T14:30:27.6025716Z ##[endgroup]
+prepare	Set up job	2026-11-15T14:30:27.6026701Z ##[group]Runner Image
+prepare	Set up job	2026-11-15T14:30:27.6027940Z Image: ubuntu-26.04
+prepare	Set up job	2026-11-15T14:30:27.6029024Z Version: 20261111.196.1
+prepare	Set up job	2026-11-15T14:30:27.6030907Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+prepare	Set up job	2026-11-15T14:30:27.6034363Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+prepare	Set up job	2026-11-15T14:30:27.6036363Z ##[endgroup]
+prepare	Set up job	2026-11-15T14:30:27.6038337Z ##[group]GITHUB_TOKEN Permissions
+prepare	Set up job	2026-11-15T14:30:27.6041444Z Contents: read
+prepare	Set up job	2026-11-15T14:30:27.6042450Z Metadata: read
+prepare	Set up job	2026-11-15T14:30:27.6043433Z ##[endgroup]
+prepare	Set up job	2026-11-15T14:30:27.6046827Z Secret source: Actions
+prepare	Set up job	2026-11-15T14:30:27.6048446Z Cache mode: write
+prepare	Set up job	2026-11-15T14:30:27.6049900Z Prepare workflow directory
+prepare	Set up job	2026-11-15T14:30:27.6407487Z Prepare all required actions
+prepare	Set up job	2026-11-15T14:30:27.6481831Z Getting action download info
+prepare	Set up job	2026-11-15T14:30:27.9393890Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+prepare	Set up job	2026-11-15T14:30:28.2172951Z Complete job name: prepare
+prepare	Create release artifact	﻿2026-11-15T14:30:28.3126330Z ##[group]Run printf 'sealix release demo\n' > app.bin
+prepare	Create release artifact	2026-11-15T14:30:28.3127187Z [36;1mprintf 'sealix release demo\n' > app.bin[0m
+prepare	Create release artifact	2026-11-15T14:30:28.3180128Z shell: /usr/bin/bash -e {0}
+prepare	Create release artifact	2026-11-15T14:30:28.3181313Z ##[endgroup]
+prepare	Run actions/upload-artifact@v4	﻿2026-11-15T14:30:28.3502406Z ##[group]Run actions/upload-artifact@v4
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3503099Z with:
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3503555Z   name: artifact-to-sign
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3504310Z   path: app.bin
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3504851Z   if-no-files-found: error
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3505386Z   compression-level: 6
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3505885Z   overwrite: false
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3506381Z   include-hidden-files: false
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.3506913Z ##[endgroup]
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.7689696Z (node:2089) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.7752389Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.7964291Z With the provided path, there will be 1 file uploaded
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.7966954Z Artifact name is valid!
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:28.7968332Z Root directory input is valid!
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.0694742Z Beginning upload of artifact content to blob storage
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.0950149Z (node:2089) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.2454870Z Uploaded bytes 150
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.2757427Z Finished uploading artifact content to blob storage!
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.2759184Z SHA256 digest of uploaded artifact zip is 58d5052f21d85ab6a3b1409b2e572ad27fefa2f5eb0009e9cd539781ca0c3c39
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.2771438Z Finalizing artifact upload
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.6239933Z Artifact artifact-to-sign.zip successfully finalized. Artifact ID 14166206083
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.6244275Z Artifact artifact-to-sign has been successfully uploaded! Final size is 150 bytes. Artifact ID is 14166206083
+prepare	Run actions/upload-artifact@v4	2026-11-15T14:30:29.6249099Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724708103/artifacts/14166206083
+prepare	Complete job	﻿2026-11-15T14:30:29.6440510Z Cleaning up orphan processes
+prepare	Complete job	2026-11-15T14:30:29.6940456Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+sign	Set up job	﻿2026-11-15T14:30:35.2537412Z Current runner version: '2.338.2'
+sign	Set up job	2026-11-15T14:30:35.2563926Z ##[group]Runner Image Provisioner
+sign	Set up job	2026-11-15T14:30:35.2565007Z Hosted Compute Agent
+sign	Set up job	2026-11-15T14:30:35.2565753Z Version: 20261103.629
+sign	Set up job	2026-11-15T14:30:35.2566470Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+sign	Set up job	2026-11-15T14:30:35.2567291Z Build Date: 2026-11-03T17:26:59Z
+sign	Set up job	2026-11-15T14:30:35.2568078Z Worker ID: {e85a5275-e427-4f56-b663-f3cca78bb06b}
+sign	Set up job	2026-11-15T14:30:35.2568874Z Region: southcentralus
+sign	Set up job	2026-11-15T14:30:35.2569500Z Cloud: Azure
+sign	Set up job	2026-11-15T14:30:35.2570105Z ##[endgroup]
+sign	Set up job	2026-11-15T14:30:35.2571528Z ##[group]Operating System
+sign	Set up job	2026-11-15T14:30:35.2572216Z Ubuntu
+sign	Set up job	2026-11-15T14:30:35.2572829Z 26.04.1
+sign	Set up job	2026-11-15T14:30:35.2573703Z LTS
+sign	Set up job	2026-11-15T14:30:35.2574469Z ##[endgroup]
+sign	Set up job	2026-11-15T14:30:35.2575076Z ##[group]Runner Image
+sign	Set up job	2026-11-15T14:30:35.2576234Z Image: ubuntu-26.04
+sign	Set up job	2026-11-15T14:30:35.2576883Z Version: 20261111.196.1
+sign	Set up job	2026-11-15T14:30:35.2578048Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+sign	Set up job	2026-11-15T14:30:35.2579908Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+sign	Set up job	2026-11-15T14:30:35.2580958Z ##[endgroup]
+sign	Set up job	2026-11-15T14:30:35.2582112Z ##[group]GITHUB_TOKEN Permissions
+sign	Set up job	2026-11-15T14:30:35.2584907Z Contents: read
+sign	Set up job	2026-11-15T14:30:35.2585519Z Metadata: read
+sign	Set up job	2026-11-15T14:30:35.2586183Z ##[endgroup]
+sign	Set up job	2026-11-15T14:30:35.2588317Z Secret source: Actions
+sign	Set up job	2026-11-15T14:30:35.2589294Z Cache mode: write
+sign	Set up job	2026-11-15T14:30:35.2590016Z Prepare workflow directory
+sign	Set up job	2026-11-15T14:30:35.2976631Z Prepare all required actions
+sign	Set up job	2026-11-15T14:30:35.3027060Z Getting action download info
+sign	Set up job	2026-11-15T14:30:35.5859945Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+sign	Set up job	2026-11-15T14:30:36.2457639Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+sign	Set up job	2026-11-15T14:30:36.5009377Z Complete job name: sign
+sign	Run actions/download-artifact@v4	﻿2026-11-15T14:30:36.5770766Z ##[group]Run actions/download-artifact@v4
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5771864Z with:
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5772439Z   name: artifact-to-sign
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5773155Z   merge-multiple: false
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5773995Z   repository: Farhanabd05/sealix
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5774729Z   run-id: 43724708103
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.5775450Z ##[endgroup]
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.9579194Z Downloading single artifact
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.9684056Z (node:2050) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:36.9689066Z (Use `node --trace-deprecation ...` to show where the warning was created)
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.1571233Z Preparing to download the following artifacts:
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.1575504Z - artifact-to-sign (ID: 14166206083, Size: 150, Expected Digest: sha256:58d5052f21d85ab6a3b1409b2e572ad27fefa2f5eb0009e9cd539781ca0c3c39)
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.3903644Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/0223a46d-81d2-49db-ba7c-6cc5552543e9/workflow-job-run-0a6535e7-ac0e-5c9e-9c52-5721b2250693/artifacts/c1c80a7c7cf02d085e893910db2cbbb9bca9890d88f35ba5f9299f94681c7b27.zip
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.3913331Z Starting download of artifact to: /home/runner/work/sealix/sealix
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.4747692Z (node:2050) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.4786035Z SHA256 digest of downloaded artifact is 58d5052f21d85ab6a3b1409b2e572ad27fefa2f5eb0009e9cd539781ca0c3c39
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.4810873Z Artifact download completed successfully.
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.4814362Z Total of 1 artifact(s) downloaded
+sign	Run actions/download-artifact@v4	2026-11-15T14:30:37.4818333Z Download artifact has finished successfully
+sign	Sign using dedicated secret	﻿2026-11-15T14:30:37.5090759Z ##[group]Run set -euo pipefail
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5092814Z [36;1mset -euo pipefail[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5094648Z [36;1m[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5096086Z [36;1m[[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]][0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5098073Z [36;1mtest -n "$SIGNING_KEY_PEM"[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5099715Z [36;1m[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5101113Z [36;1mimage="ghcr.io/${REPOSITORY,,}@${DIGEST}"[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5103015Z [36;1m[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5104473Z [36;1mumask 077[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5106087Z [36;1mkeyfile="$(mktemp "$RUNNER_TEMP/sealix-key.XXXXXX")"[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5107983Z [36;1mtrap 'rm -f "$keyfile"' EXIT[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5109374Z [36;1m[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5110708Z [36;1mprintf '%s' "$SIGNING_KEY_PEM" > "$keyfile"[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5112247Z [36;1m[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5113526Z [36;1mdocker run --rm \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5114881Z [36;1m  --network none \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5116252Z [36;1m  --read-only \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5117599Z [36;1m  --user "$(id -u):$(id -g)" \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5119405Z [36;1m  --mount "type=bind,src=$PWD,dst=/work" \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5121276Z [36;1m  --mount "type=bind,src=$keyfile,dst=/key.pem,readonly" \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5123082Z [36;1m  "$image" sign \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5124752Z [36;1m  --file /work/app.bin \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5126171Z [36;1m  --package "$PKG" \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5127562Z [36;1m  --version "$VER" \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5128880Z [36;1m  --key /key.pem \[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5130297Z [36;1m  --out /work/release.bundle.json[0m
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5176760Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5178522Z env:
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5181745Z   SIGNING_KEY_PEM: ***
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5183804Z   DIGEST: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5185918Z   REPOSITORY: Farhanabd05/sealix
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5187317Z   PKG: contoh-app
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5188421Z   VER: 1.0.0
+sign	Sign using dedicated secret	2026-11-15T14:30:37.5189629Z ##[endgroup]
+sign	Sign using dedicated secret	2026-11-15T14:30:37.6394716Z Unable to find image 'ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a' locally
+sign	Sign using dedicated secret	2026-11-15T14:30:38.1926241Z ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a: Pulling from farhanabd05/sealix
+sign	Sign using dedicated secret	2026-11-15T14:30:38.6431176Z b41df92666c3: Pulling fs layer
+sign	Sign using dedicated secret	2026-11-15T14:30:38.7355966Z 44136fa355b3: Already exists
+sign	Sign using dedicated secret	2026-11-15T14:30:38.8353608Z 5c7213b024eb: Download complete
+sign	Sign using dedicated secret	2026-11-15T14:30:38.9444369Z b41df92666c3: Download complete
+sign	Sign using dedicated secret	2026-11-15T14:30:39.0075098Z b41df92666c3: Pull complete
+sign	Sign using dedicated secret	2026-11-15T14:30:39.0085868Z Digest: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+sign	Sign using dedicated secret	2026-11-15T14:30:39.0087707Z Status: Downloaded newer image for ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+sign	Sign using dedicated secret	2026-11-15T14:30:40.0830302Z bundle ditulis ke /work/release.bundle.json (algoritma ed25519, keyid f216f1c5fa04b09d6c78e69a864543be15ed8400881e7abb855b0e964c7c5241)
+sign	Run actions/upload-artifact@v4	﻿2026-11-15T14:30:40.1516677Z ##[group]Run actions/upload-artifact@v4
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1517222Z with:
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1517589Z   name: signed-release
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1518021Z   path: app.bin
+sign	Run actions/upload-artifact@v4	release.bundle.json
+sign	Run actions/upload-artifact@v4	
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1518451Z   if-no-files-found: error
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1518835Z   compression-level: 6
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1519280Z   overwrite: false
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1519659Z   include-hidden-files: false
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.1520093Z ##[endgroup]
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3283576Z (node:2155) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3285426Z (Use `node --trace-deprecation ...` to show where the warning was created)
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3396342Z Multiple search paths detected. Calculating the least common ancestor of all paths
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3455556Z The least common ancestor is /home/runner/work/sealix/sealix. This will be the root directory of the artifact
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3466621Z With the provided path, there will be 2 files uploaded
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3539397Z Artifact name is valid!
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.3555079Z Root directory input is valid!
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.6331286Z Beginning upload of artifact content to blob storage
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.6571617Z (node:2155) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.8342789Z Uploaded bytes 709
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.8725104Z Finished uploading artifact content to blob storage!
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.8726977Z SHA256 digest of uploaded artifact zip is 3ac027892da90eb3a8d1c15ef67cec7841c876bafb7bab0c3bc29b0cc95ed186
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:40.8728746Z Finalizing artifact upload
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:41.2270826Z Artifact signed-release.zip successfully finalized. Artifact ID 14165603933
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:41.2272299Z Artifact signed-release has been successfully uploaded! Final size is 709 bytes. Artifact ID is 14165603933
+sign	Run actions/upload-artifact@v4	2026-11-15T14:30:41.2274161Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724708103/artifacts/14165603933
+sign	Complete job	﻿2026-11-15T14:30:41.2456173Z Cleaning up orphan processes
+sign	Complete job	2026-11-15T14:30:41.2783881Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/download-artifact@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+verify	Set up job	﻿2026-11-15T14:30:46.9348174Z Current runner version: '2.338.2'
+verify	Set up job	2026-11-15T14:30:46.9374232Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-11-15T14:30:46.9375561Z Hosted Compute Agent
+verify	Set up job	2026-11-15T14:30:46.9376189Z Version: 20261103.629
+verify	Set up job	2026-11-15T14:30:46.9376915Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+verify	Set up job	2026-11-15T14:30:46.9377722Z Build Date: 2026-11-03T17:26:59Z
+verify	Set up job	2026-11-15T14:30:46.9378420Z Worker ID: {fb2f5a51-7e21-4306-a7ec-82a37c171114}
+verify	Set up job	2026-11-15T14:30:46.9379114Z Region: us-west-2
+verify	Set up job	2026-11-15T14:30:46.9379679Z Cloud: AWS
+verify	Set up job	2026-11-15T14:30:46.9380206Z ##[endgroup]
+verify	Set up job	2026-11-15T14:30:46.9381868Z ##[group]Operating System
+verify	Set up job	2026-11-15T14:30:46.9382485Z Ubuntu
+verify	Set up job	2026-11-15T14:30:46.9383007Z 26.04.1
+verify	Set up job	2026-11-15T14:30:46.9383527Z LTS
+verify	Set up job	2026-11-15T14:30:46.9384030Z ##[endgroup]
+verify	Set up job	2026-11-15T14:30:46.9384592Z ##[group]Runner Image
+verify	Set up job	2026-11-15T14:30:46.9385459Z Image: ubuntu-26.04
+verify	Set up job	2026-11-15T14:30:46.9386043Z Version: 20261111.82.6
+verify	Set up job	2026-11-15T14:30:46.9387162Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.82/images/ubuntu/Ubuntu2604-Readme.md
+verify	Set up job	2026-11-15T14:30:46.9388978Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.82
+verify	Set up job	2026-11-15T14:30:46.9389868Z ##[endgroup]
+verify	Set up job	2026-11-15T14:30:46.9390986Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-11-15T14:30:46.9392914Z Contents: read
+verify	Set up job	2026-11-15T14:30:46.9393471Z Metadata: read
+verify	Set up job	2026-11-15T14:30:46.9394086Z ##[endgroup]
+verify	Set up job	2026-11-15T14:30:46.9396565Z Secret source: Actions
+verify	Set up job	2026-11-15T14:30:46.9397587Z Cache mode: write
+verify	Set up job	2026-11-15T14:30:46.9398238Z Prepare workflow directory
+verify	Set up job	2026-11-15T14:30:46.9730038Z Prepare all required actions
+verify	Set up job	2026-11-15T14:30:46.9800790Z Getting action download info
+verify	Set up job	2026-11-15T14:30:47.3315818Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-11-15T14:30:49.3544239Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+verify	Set up job	2026-11-15T14:30:49.6709740Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-11-15T14:30:49.9787460Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-11-15T14:30:50.0471959Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0473023Z with:
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0473748Z   repository: Farhanabd05/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0479835Z   token: ***
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0480507Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0481188Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0481860Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0482634Z   clean: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0483308Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0484096Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0484760Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0485620Z   show-progress: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0486316Z   lfs: false
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0487089Z   submodules: false
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0487818Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0488602Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-11-15T14:30:50.0489635Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1032527Z Syncing repository: Farhanabd05/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1034848Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1035718Z Working directory is '/home/runner/work/sealix/sealix'
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1042037Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1089753Z git version 2.56.1
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1103026Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1114546Z Temporarily overriding HOME='/home/runner/work/_temp/8d1315b4-2140-42b3-8a5b-193bbb970327' before making global git config changes
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1117066Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1118764Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1658870Z Deleting the contents of '/home/runner/work/sealix/sealix'
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1677062Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.1678176Z [command]/usr/bin/git init /home/runner/work/sealix/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2115537Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2117275Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2118184Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2118745Z hint: call:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2118988Z hint:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2119347Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2119669Z hint:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2120006Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2120481Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2120848Z hint:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2121093Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2121361Z hint:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2121693Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2143544Z Initialized empty Git repository in /home/runner/work/sealix/sealix/.git/
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2151350Z [command]/usr/bin/git remote add origin https://github.com/Farhanabd05/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2258218Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2259145Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2261577Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2285499Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2286318Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2290760Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.2312561Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.4336996Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.4397000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.4687026Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.4714578Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.4966387Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.5014698Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.5045719Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.5047143Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d684de7871faca6297c91abd8e3987528a280f7f:refs/remotes/origin/main
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9833968Z From https://github.com/Farhanabd05/sealix
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9846929Z  * [new ref]         d684de7871faca6297c91abd8e3987528a280f7f -> origin/main
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9848707Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9849345Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9850060Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9850547Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9956118Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9971482Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-11-15T14:30:53.9976912Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+verify	Run actions/checkout@v4	2026-11-15T14:30:54.0076771Z Switched to a new branch 'main'
+verify	Run actions/checkout@v4	2026-11-15T14:30:54.0087212Z branch 'main' set up to track 'origin/main'.
+verify	Run actions/checkout@v4	2026-11-15T14:30:54.0106546Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-11-15T14:30:54.0142634Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-11-15T14:30:54.0157871Z d684de7871faca6297c91abd8e3987528a280f7f
+verify	Run actions/download-artifact@v4	﻿2026-11-15T14:30:54.0348210Z ##[group]Run actions/download-artifact@v4
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0348541Z with:
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0348751Z   name: signed-release
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0349034Z   path: release
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0349255Z   merge-multiple: false
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0349508Z   repository: Farhanabd05/sealix
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0349849Z   run-id: 43724708103
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.0350050Z ##[endgroup]
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.1556346Z Downloading single artifact
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.1777724Z (node:2291) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.1784709Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.4616410Z Preparing to download the following artifacts:
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.4617119Z - signed-release (ID: 14165603933, Size: 709, Expected Digest: sha256:3ac027892da90eb3a8d1c15ef67cec7841c876bafb7bab0c3bc29b0cc95ed186)
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.7999765Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/0223a46d-81d2-49db-ba7c-6cc5552543e9/workflow-job-run-e6eea587-43b8-500c-a047-da72b9abc511/artifacts/5d94b98b79e249b11edd3786689850c905ad3f353a6aa8226d3c53b54b94e478.zip
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:54.8001845Z Starting download of artifact to: /home/runner/work/sealix/sealix/release
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:55.1305828Z (node:2291) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:55.1362936Z SHA256 digest of downloaded artifact is 3ac027892da90eb3a8d1c15ef67cec7841c876bafb7bab0c3bc29b0cc95ed186
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:55.1364124Z Artifact download completed successfully.
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:55.1364757Z Total of 1 artifact(s) downloaded
+verify	Run actions/download-artifact@v4	2026-11-15T14:30:55.1367641Z Download artifact has finished successfully
+verify	Verify without private key	﻿2026-11-15T14:30:55.1476730Z ##[group]Run set -euo pipefail
+verify	Verify without private key	2026-11-15T14:30:55.1477171Z [36;1mset -euo pipefail[0m
+verify	Verify without private key	2026-11-15T14:30:55.1477401Z [36;1m[0m
+verify	Verify without private key	2026-11-15T14:30:55.1477671Z [36;1m[[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]][0m
+verify	Verify without private key	2026-11-15T14:30:55.1478028Z [36;1mtest -f ci/trust.json[0m
+verify	Verify without private key	2026-11-15T14:30:55.1478272Z [36;1m[0m
+verify	Verify without private key	2026-11-15T14:30:55.1478535Z [36;1mimage="ghcr.io/${REPOSITORY,,}@${DIGEST}"[0m
+verify	Verify without private key	2026-11-15T14:30:55.1478832Z [36;1m[0m
+verify	Verify without private key	2026-11-15T14:30:55.1479062Z [36;1mdocker run --rm \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1479304Z [36;1m  --network none \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1479558Z [36;1m  --read-only \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1479813Z [36;1m  --user "$(id -u):$(id -g)" \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1480166Z [36;1m  --mount "type=bind,src=$PWD/release,dst=/release,readonly" \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1480574Z [36;1m  --mount "type=bind,src=$PWD/ci/trust.json,dst=/trust.json,readonly" \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1480911Z [36;1m  "$image" verify \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1481206Z [36;1m  --file /release/app.bin \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1481556Z [36;1m  --bundle /release/release.bundle.json \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1481861Z [36;1m  --trust-store /trust.json \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1482120Z [36;1m  --package "$PKG" \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1482365Z [36;1m  --version "$VER" \[0m
+verify	Verify without private key	2026-11-15T14:30:55.1482666Z [36;1m  --json | tee verification.json[0m
+verify	Verify without private key	2026-11-15T14:30:55.1482905Z [36;1m[0m
+verify	Verify without private key	2026-11-15T14:30:55.1483189Z [36;1mjq -e '.status == "OK" and .valid == true' verification.json[0m
+verify	Verify without private key	2026-11-15T14:30:55.1506322Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+verify	Verify without private key	2026-11-15T14:30:55.1506663Z env:
+verify	Verify without private key	2026-11-15T14:30:55.1507007Z   DIGEST: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+verify	Verify without private key	2026-11-15T14:30:55.1507390Z   REPOSITORY: Farhanabd05/sealix
+verify	Verify without private key	2026-11-15T14:30:55.1507674Z   PKG: contoh-app
+verify	Verify without private key	2026-11-15T14:30:55.1507915Z   VER: 1.0.0
+verify	Verify without private key	2026-11-15T14:30:55.1508211Z ##[endgroup]
+verify	Verify without private key	2026-11-15T14:30:56.0745100Z Unable to find image 'ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a' locally
+verify	Verify without private key	2026-11-15T14:30:56.5700049Z ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a: Pulling from farhanabd05/sealix
+verify	Verify without private key	2026-11-15T14:30:57.0403763Z b41df92666c3: Pulling fs layer
+verify	Verify without private key	2026-11-15T14:30:57.0771686Z 44136fa355b3: Already exists
+verify	Verify without private key	2026-11-15T14:30:57.2768331Z 5c7213b024eb: Download complete
+verify	Verify without private key	2026-11-15T14:30:57.3258896Z b41df92666c3: Download complete
+verify	Verify without private key	2026-11-15T14:30:57.3313236Z b41df92666c3: Pull complete
+verify	Verify without private key	2026-11-15T14:30:57.3314163Z Digest: sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+verify	Verify without private key	2026-11-15T14:30:57.3315067Z Status: Downloaded newer image for ghcr.io/farhanabd05/sealix@sha256:157c26627908855d2a290ba676f960c66a37b4f5f46f72310933423a3ca1693a
+verify	Verify without private key	2026-11-15T14:30:57.6767647Z {"valid":true,"status":"OK","message":"signature, metadata, dan artefak valid","algorithm":"ed25519","keyid":"f216f1c5fa04b09d6c78e69a864543be15ed8400881e7abb855b0e964c7c5241","package":"contoh-app","version":"1.0.0"}
+verify	Verify without private key	2026-11-15T14:30:57.7065449Z true
+verify	Run actions/upload-artifact@v4	﻿2026-11-15T14:30:57.7125945Z ##[group]Run actions/upload-artifact@v4
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7126302Z with:
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7126510Z   name: verified-release
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7126809Z   path: release/app.bin
+verify	Run actions/upload-artifact@v4	verification.json
+verify	Run actions/upload-artifact@v4	
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7127117Z   if-no-files-found: error
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7127404Z   compression-level: 6
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7127634Z   overwrite: false
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7127861Z   include-hidden-files: false
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.7128127Z ##[endgroup]
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8316529Z (node:2389) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8317642Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8402212Z Multiple search paths detected. Calculating the least common ancestor of all paths
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8406589Z The least common ancestor is /home/runner/work/sealix/sealix. This will be the root directory of the artifact
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8407600Z With the provided path, there will be 2 files uploaded
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8409024Z Artifact name is valid!
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:57.8409586Z Root directory input is valid!
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.2012841Z Beginning upload of artifact content to blob storage
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.2557751Z (node:2389) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.5857103Z Uploaded bytes 466
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.6744234Z Finished uploading artifact content to blob storage!
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.6745639Z SHA256 digest of uploaded artifact zip is 2861e09f8bfefdbd503ebd3c5dc65155acb9914633644e505bc32dab55cf408a
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:58.6746407Z Finalizing artifact upload
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:59.0687628Z Artifact verified-release.zip successfully finalized. Artifact ID 14165427971
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:59.0688605Z Artifact verified-release has been successfully uploaded! Final size is 466 bytes. Artifact ID is 14165427971
+verify	Run actions/upload-artifact@v4	2026-11-15T14:30:59.0689576Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724708103/artifacts/14165427971
+verify	Post Run actions/checkout@v4	﻿2026-11-15T14:30:59.0818484Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1546173Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1587782Z git version 2.56.1
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1629476Z Temporarily overriding HOME='/home/runner/work/_temp/0500a657-faa5-4d38-a3bc-7f2725d10207' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1630439Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1631826Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sealix/sealix
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1687061Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.1764678Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2082605Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2104464Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2147700Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2187053Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2398009Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-11-15T14:30:59.2419208Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-11-15T14:30:59.2686249Z Cleaning up orphan processes
+verify	Complete job	2026-11-15T14:30:59.2943353Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+deploy	Set up job	﻿2026-11-15T14:31:05.1008014Z Current runner version: '2.338.2'
+deploy	Set up job	2026-11-15T14:31:05.1040027Z ##[group]Runner Image Provisioner
+deploy	Set up job	2026-11-15T14:31:05.1041108Z Hosted Compute Agent
+deploy	Set up job	2026-11-15T14:31:05.1041809Z Version: 20261103.629
+deploy	Set up job	2026-11-15T14:31:05.1042584Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+deploy	Set up job	2026-11-15T14:31:05.1043634Z Build Date: 2026-11-03T17:26:59Z
+deploy	Set up job	2026-11-15T14:31:05.1044510Z Worker ID: {da6fade5-29ce-4a62-b8fc-f572ae1d87ba}
+deploy	Set up job	2026-11-15T14:31:05.1045492Z Region: centralus
+deploy	Set up job	2026-11-15T14:31:05.1046155Z Cloud: Azure
+deploy	Set up job	2026-11-15T14:31:05.1046774Z ##[endgroup]
+deploy	Set up job	2026-11-15T14:31:05.1049045Z ##[group]Operating System
+deploy	Set up job	2026-11-15T14:31:05.1049914Z Ubuntu
+deploy	Set up job	2026-11-15T14:31:05.1050631Z 26.04.1
+deploy	Set up job	2026-11-15T14:31:05.1051255Z LTS
+deploy	Set up job	2026-11-15T14:31:05.1051838Z ##[endgroup]
+deploy	Set up job	2026-11-15T14:31:05.1052594Z ##[group]Runner Image
+deploy	Set up job	2026-11-15T14:31:05.1053362Z Image: ubuntu-26.04
+deploy	Set up job	2026-11-15T14:31:05.1054097Z Version: 20261111.196.1
+deploy	Set up job	2026-11-15T14:31:05.1055433Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+deploy	Set up job	2026-11-15T14:31:05.1057688Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+deploy	Set up job	2026-11-15T14:31:05.1059129Z ##[endgroup]
+deploy	Set up job	2026-11-15T14:31:05.1060586Z ##[group]GITHUB_TOKEN Permissions
+deploy	Set up job	2026-11-15T14:31:05.1062745Z Contents: read
+deploy	Set up job	2026-11-15T14:31:05.1063513Z Metadata: read
+deploy	Set up job	2026-11-15T14:31:05.1064247Z ##[endgroup]
+deploy	Set up job	2026-11-15T14:31:05.1066761Z Secret source: Actions
+deploy	Set up job	2026-11-15T14:31:05.1067968Z Cache mode: write
+deploy	Set up job	2026-11-15T14:31:05.1069161Z Prepare workflow directory
+deploy	Set up job	2026-11-15T14:31:05.1740203Z Prepare all required actions
+deploy	Set up job	2026-11-15T14:31:05.1861229Z Getting action download info
+deploy	Set up job	2026-11-15T14:31:05.4782228Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+deploy	Set up job	2026-11-15T14:31:05.9806989Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+deploy	Set up job	2026-11-15T14:31:06.2357339Z Complete job name: deploy
+deploy	Run actions/download-artifact@v4	﻿2026-11-15T14:31:06.3041123Z ##[group]Run actions/download-artifact@v4
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3041992Z with:
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3042385Z   name: verified-release
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3042833Z   merge-multiple: false
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3043263Z   repository: Farhanabd05/sealix
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3043715Z   run-id: 43724708103
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.3044220Z ##[endgroup]
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.6001787Z Downloading single artifact
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.6195034Z (node:1998) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.6197721Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.7611361Z Preparing to download the following artifacts:
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.7613620Z - verified-release (ID: 14165427971, Size: 466, Expected Digest: sha256:2861e09f8bfefdbd503ebd3c5dc65155acb9914633644e505bc32dab55cf408a)
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.9207312Z Redirecting to blob download url: https://productionresultssa15.blob.core.windows.net/actions-results/0223a46d-81d2-49db-ba7c-6cc5552543e9/workflow-job-run-8b75ec9e-dd4d-567b-836d-bf20a73853dd/artifacts/249e10b4bed7a53633fb7ee51f4fdda4a2f036296bbd64fe93f0a061cb06b5e4.zip
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:06.9213178Z Starting download of artifact to: /home/runner/work/sealix/sealix
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:07.0709459Z (node:1998) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:07.0714858Z SHA256 digest of downloaded artifact is 2861e09f8bfefdbd503ebd3c5dc65155acb9914633644e505bc32dab55cf408a
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:07.0739808Z Artifact download completed successfully.
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:07.0743044Z Total of 1 artifact(s) downloaded
+deploy	Run actions/download-artifact@v4	2026-11-15T14:31:07.0761641Z Download artifact has finished successfully
+deploy	Publish marker only when verified	﻿2026-11-15T14:31:07.0930998Z ##[group]Run set -euo pipefail
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0932309Z [36;1mset -euo pipefail[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0933265Z [36;1m[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0934347Z [36;1mjq -e '.status == "OK" and .valid == true' verification.json[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0935964Z [36;1mtest -f release/app.bin[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0936977Z [36;1m[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0937917Z [36;1msha256sum release/app.bin > deployed.marker[0m
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0992729Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+deploy	Publish marker only when verified	2026-11-15T14:31:07.0994095Z ##[endgroup]
+deploy	Publish marker only when verified	2026-11-15T14:31:07.1145209Z true
+deploy	Run actions/upload-artifact@v4	﻿2026-11-15T14:31:07.1356584Z ##[group]Run actions/upload-artifact@v4
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1358199Z with:
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1359493Z   name: deploy-evidence
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1360784Z   path: deployed.marker
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1362104Z   if-no-files-found: error
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1363459Z   compression-level: 6
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1364769Z   overwrite: false
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1366114Z   include-hidden-files: false
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.1367496Z ##[endgroup]
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.2939376Z (node:2014) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.2950456Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.3259677Z With the provided path, there will be 1 file uploaded
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.3728781Z Artifact name is valid!
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.3730921Z Root directory input is valid!
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.5880761Z Beginning upload of artifact content to blob storage
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.5980713Z (node:2014) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.7670044Z Uploaded bytes 218
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.8042814Z Finished uploading artifact content to blob storage!
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.8047868Z SHA256 digest of uploaded artifact zip is 0dea74dab0fb0a3032023535de1473c1e8b061363938a5058183c0f873f95756
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:07.8054648Z Finalizing artifact upload
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:08.1664748Z Artifact deploy-evidence.zip successfully finalized. Artifact ID 14165968140
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:08.1665795Z Artifact deploy-evidence has been successfully uploaded! Final size is 218 bytes. Artifact ID is 14165968140
+deploy	Run actions/upload-artifact@v4	2026-11-15T14:31:08.1675120Z Artifact download URL: https://github.com/Farhanabd05/sealix/actions/runs/43724708103/artifacts/14165968140
+deploy	Complete job	﻿2026-11-15T14:31:08.1776646Z Cleaning up orphan processes
+deploy	Complete job	2026-11-15T14:31:08.2175475Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/download-artifact@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
