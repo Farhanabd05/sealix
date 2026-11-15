@@ -1,0 +1,465 @@
+# go version: go version go1.27.4 linux/amd64
+# tanggal: 2026-11-15 21:37 WIB
+=== RUN   TestPercentileNearestRank
+--- PASS: TestPercentileNearestRank (0.00s)
+=== RUN   TestMedian
+--- PASS: TestMedian (0.00s)
+=== RUN   TestMeasure
+--- PASS: TestMeasure (0.00s)
+=== RUN   TestMeasureStopsOnError
+--- PASS: TestMeasureStopsOnError (0.00s)
+=== RUN   TestMeasurePreservesExecutionOrder
+--- PASS: TestMeasurePreservesExecutionOrder (0.00s)
+=== RUN   TestMeasureInterleavedOrder
+--- PASS: TestMeasureInterleavedOrder (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/cmd/bench	0.066s
+=== RUN   TestRoundtrip
+--- PASS: TestRoundtrip (0.00s)
+=== RUN   TestReject
+--- PASS: TestReject (0.00s)
+=== RUN   TestReorderedBundle
+--- PASS: TestReorderedBundle (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/bundle	0.009s
+=== RUN   TestU01
+=== RUN   TestU01/ed25519
+=== RUN   TestU01/ed25519/teks
+=== RUN   TestU01/ed25519/kosong
+=== RUN   TestU01/ed25519/biner
+=== RUN   TestU01/ecdsa-p256-sha2
+=== RUN   TestU01/ecdsa-p256-sha2/teks
+=== RUN   TestU01/ecdsa-p256-sha2/kosong
+=== RUN   TestU01/ecdsa-p256-sha2/biner
+=== RUN   TestU01/rsa-pss-sha256
+=== RUN   TestU01/rsa-pss-sha256/teks
+=== RUN   TestU01/rsa-pss-sha256/kosong
+=== RUN   TestU01/rsa-pss-sha256/biner
+--- PASS: TestU01 (0.67s)
+    --- PASS: TestU01/ed25519 (0.01s)
+        --- PASS: TestU01/ed25519/teks (0.00s)
+        --- PASS: TestU01/ed25519/kosong (0.00s)
+        --- PASS: TestU01/ed25519/biner (0.00s)
+    --- PASS: TestU01/ecdsa-p256-sha2 (0.01s)
+        --- PASS: TestU01/ecdsa-p256-sha2/teks (0.00s)
+        --- PASS: TestU01/ecdsa-p256-sha2/kosong (0.00s)
+        --- PASS: TestU01/ecdsa-p256-sha2/biner (0.00s)
+    --- PASS: TestU01/rsa-pss-sha256 (0.65s)
+        --- PASS: TestU01/rsa-pss-sha256/teks (0.01s)
+        --- PASS: TestU01/rsa-pss-sha256/kosong (0.01s)
+        --- PASS: TestU01/rsa-pss-sha256/biner (0.01s)
+=== RUN   TestU14
+=== RUN   TestU14/ed25519
+    e2e_test.go:241: ed25519 len=64 sig1[0:8]=38bc9152860c6d0b sig2[0:8]=38bc9152860c6d0b identical=true
+=== RUN   TestU14/ecdsa-p256-sha2
+    e2e_test.go:241: ecdsa-p256-sha2 len=64 sig1[0:8]=1a47291aa950889d sig2[0:8]=54ef70058b8bafc5 identical=false
+=== RUN   TestU14/rsa-pss-sha256
+    e2e_test.go:241: rsa-pss-sha256 len=384 sig1[0:8]=3a569e0ff36204b2 sig2[0:8]=6b73a2525f41ffa1 identical=false
+--- PASS: TestU14 (0.23s)
+    --- PASS: TestU14/ed25519 (0.01s)
+    --- PASS: TestU14/ecdsa-p256-sha2 (0.01s)
+    --- PASS: TestU14/rsa-pss-sha256 (0.22s)
+=== RUN   TestNegativeU02ToU13
+=== RUN   TestNegativeU02ToU13/U02
+=== RUN   TestNegativeU02ToU13/U03-append
+=== RUN   TestNegativeU02ToU13/U03-remove
+=== RUN   TestNegativeU02ToU13/U04
+=== RUN   TestNegativeU02ToU13/U05
+=== RUN   TestNegativeU02ToU13/U06
+=== RUN   TestNegativeU02ToU13/U07
+=== RUN   TestNegativeU02ToU13/U08
+=== RUN   TestNegativeU02ToU13/U09
+=== RUN   TestNegativeU02ToU13/U10a
+=== RUN   TestNegativeU02ToU13/U10b
+=== RUN   TestNegativeU02ToU13/U10c
+=== RUN   TestNegativeU02ToU13/U10d
+=== RUN   TestNegativeU02ToU13/U11
+=== RUN   TestNegativeU02ToU13/U12
+=== RUN   TestNegativeU02ToU13/U13
+--- PASS: TestNegativeU02ToU13 (0.11s)
+    --- PASS: TestNegativeU02ToU13/U02 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U03-append (0.01s)
+    --- PASS: TestNegativeU02ToU13/U03-remove (0.01s)
+    --- PASS: TestNegativeU02ToU13/U04 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U05 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U06 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U07 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U08 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U09 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U10a (0.01s)
+    --- PASS: TestNegativeU02ToU13/U10b (0.00s)
+    --- PASS: TestNegativeU02ToU13/U10c (0.01s)
+    --- PASS: TestNegativeU02ToU13/U10d (0.01s)
+    --- PASS: TestNegativeU02ToU13/U11 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U12 (0.01s)
+    --- PASS: TestNegativeU02ToU13/U13 (0.01s)
+=== RUN   TestVerifyPrecedence
+=== RUN   TestVerifyPrecedence/INPUT_before_FORMAT
+=== RUN   TestVerifyPrecedence/TRUST_before_SIGNATURE
+=== RUN   TestVerifyPrecedence/SIGNATURE_before_METADATA
+=== RUN   TestVerifyPrecedence/METADATA_before_ARTIFACT
+--- PASS: TestVerifyPrecedence (0.03s)
+    --- PASS: TestVerifyPrecedence/INPUT_before_FORMAT (0.01s)
+    --- PASS: TestVerifyPrecedence/TRUST_before_SIGNATURE (0.01s)
+    --- PASS: TestVerifyPrecedence/SIGNATURE_before_METADATA (0.01s)
+    --- PASS: TestVerifyPrecedence/METADATA_before_ARTIFACT (0.01s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/cli	1.055s
+=== RUN   TestParse
+=== RUN   TestParse/objek_valid
+=== RUN   TestParse/key_duplikat
+=== RUN   TestParse/duplikat_bersarang
+=== RUN   TestParse/data_sisa
+=== RUN   TestParse/koma_di_akhir
+=== RUN   TestParse/string
+=== RUN   TestParse/angka
+=== RUN   TestParse/bool
+=== RUN   TestParse/null
+=== RUN   TestParse/dua_nilai
+=== RUN   TestParse/objek_kosong
+=== RUN   TestParse/objek_bersarang
+=== RUN   TestParse/key_beda_huruf
+=== RUN   TestParse/array_kosong
+=== RUN   TestParse/array_campuran
+=== RUN   TestParse/duplikat_dalam_array
+=== RUN   TestParse/koma_di_akhir_array
+=== RUN   TestParse/BOM_di_awal
+=== RUN   TestParse/UTF-8_rusak
+=== RUN   TestParse/UTF-8_valid_non-ASCII
+--- PASS: TestParse (0.00s)
+    --- PASS: TestParse/objek_valid (0.00s)
+    --- PASS: TestParse/key_duplikat (0.00s)
+    --- PASS: TestParse/duplikat_bersarang (0.00s)
+    --- PASS: TestParse/data_sisa (0.00s)
+    --- PASS: TestParse/koma_di_akhir (0.00s)
+    --- PASS: TestParse/string (0.00s)
+    --- PASS: TestParse/angka (0.00s)
+    --- PASS: TestParse/bool (0.00s)
+    --- PASS: TestParse/null (0.00s)
+    --- PASS: TestParse/dua_nilai (0.00s)
+    --- PASS: TestParse/objek_kosong (0.00s)
+    --- PASS: TestParse/objek_bersarang (0.00s)
+    --- PASS: TestParse/key_beda_huruf (0.00s)
+    --- PASS: TestParse/array_kosong (0.00s)
+    --- PASS: TestParse/array_campuran (0.00s)
+    --- PASS: TestParse/duplikat_dalam_array (0.00s)
+    --- PASS: TestParse/koma_di_akhir_array (0.00s)
+    --- PASS: TestParse/BOM_di_awal (0.00s)
+    --- PASS: TestParse/UTF-8_rusak (0.00s)
+    --- PASS: TestParse/UTF-8_valid_non-ASCII (0.00s)
+=== RUN   TestParseDepth
+--- PASS: TestParseDepth (0.00s)
+=== RUN   TestValueInt
+=== RUN   TestValueInt/nol
+=== RUN   TestValueInt/positif
+=== RUN   TestValueInt/batas_aman_maksimal
+=== RUN   TestValueInt/melebihi_batas_aman
+=== RUN   TestValueInt/desimal
+=== RUN   TestValueInt/eksponen
+=== RUN   TestValueInt/nol_negatif
+=== RUN   TestValueInt/negatif
+=== RUN   TestValueInt/nol_di_depan
+=== RUN   TestValueInt/tanda_plus
+=== RUN   TestValueInt/string_angka_kosong
+=== RUN   TestValueInt/bukan_angka_bool
+=== RUN   TestValueInt/bukan_angka_string
+--- PASS: TestValueInt (0.00s)
+    --- PASS: TestValueInt/nol (0.00s)
+    --- PASS: TestValueInt/positif (0.00s)
+    --- PASS: TestValueInt/batas_aman_maksimal (0.00s)
+    --- PASS: TestValueInt/melebihi_batas_aman (0.00s)
+    --- PASS: TestValueInt/desimal (0.00s)
+    --- PASS: TestValueInt/eksponen (0.00s)
+    --- PASS: TestValueInt/nol_negatif (0.00s)
+    --- PASS: TestValueInt/negatif (0.00s)
+    --- PASS: TestValueInt/nol_di_depan (0.00s)
+    --- PASS: TestValueInt/tanda_plus (0.00s)
+    --- PASS: TestValueInt/string_angka_kosong (0.00s)
+    --- PASS: TestValueInt/bukan_angka_bool (0.00s)
+    --- PASS: TestValueInt/bukan_angka_string (0.00s)
+=== RUN   TestValueString
+=== RUN   TestValueString/string_valid
+=== RUN   TestValueString/string_kosong
+=== RUN   TestValueString/null
+=== RUN   TestValueString/angka
+=== RUN   TestValueString/bool
+=== RUN   TestValueString/array_kosong
+=== RUN   TestValueString/objek_kosong
+--- PASS: TestValueString (0.00s)
+    --- PASS: TestValueString/string_valid (0.00s)
+    --- PASS: TestValueString/string_kosong (0.00s)
+    --- PASS: TestValueString/null (0.00s)
+    --- PASS: TestValueString/angka (0.00s)
+    --- PASS: TestValueString/bool (0.00s)
+    --- PASS: TestValueString/array_kosong (0.00s)
+    --- PASS: TestValueString/objek_kosong (0.00s)
+=== RUN   TestValueArray
+--- PASS: TestValueArray (0.00s)
+=== RUN   TestValueObject
+--- PASS: TestValueObject (0.00s)
+=== RUN   TestObjectExactly
+=== RUN   TestObjectExactly/sama_persis
+=== RUN   TestObjectExactly/urutan_beda
+=== RUN   TestObjectExactly/objek_kosong
+=== RUN   TestObjectExactly/key_berlebih
+=== RUN   TestObjectExactly/key_kurang
+=== RUN   TestObjectExactly/beda_huruf
+--- PASS: TestObjectExactly (0.00s)
+    --- PASS: TestObjectExactly/sama_persis (0.00s)
+    --- PASS: TestObjectExactly/urutan_beda (0.00s)
+    --- PASS: TestObjectExactly/objek_kosong (0.00s)
+    --- PASS: TestObjectExactly/key_berlebih (0.00s)
+    --- PASS: TestObjectExactly/key_kurang (0.00s)
+    --- PASS: TestObjectExactly/beda_huruf (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/jsonstrict	0.009s
+=== RUN   TestRunGeneratesKeyPairs
+=== RUN   TestRunGeneratesKeyPairs/ed25519
+=== RUN   TestRunGeneratesKeyPairs/ecdsa-p256-sha2
+=== RUN   TestRunGeneratesKeyPairs/rsa-pss-sha256
+--- PASS: TestRunGeneratesKeyPairs (0.28s)
+    --- PASS: TestRunGeneratesKeyPairs/ed25519 (0.00s)
+    --- PASS: TestRunGeneratesKeyPairs/ecdsa-p256-sha2 (0.00s)
+    --- PASS: TestRunGeneratesKeyPairs/rsa-pss-sha256 (0.27s)
+=== RUN   TestRunRefusesExistingFilesWithoutForce
+--- PASS: TestRunRefusesExistingFilesWithoutForce (0.00s)
+=== RUN   TestRunForceOverwritesExistingFiles
+--- PASS: TestRunForceOverwritesExistingFiles (0.00s)
+=== RUN   TestRunRejectsMissingRequiredFlags
+=== RUN   TestRunRejectsMissingRequiredFlags/missing_algorithm
+=== RUN   TestRunRejectsMissingRequiredFlags/missing_output
+--- PASS: TestRunRejectsMissingRequiredFlags (0.00s)
+    --- PASS: TestRunRejectsMissingRequiredFlags/missing_algorithm (0.00s)
+    --- PASS: TestRunRejectsMissingRequiredFlags/missing_output (0.00s)
+=== RUN   TestRunRejectsUnknownAlgorithm
+--- PASS: TestRunRejectsUnknownAlgorithm (0.00s)
+=== RUN   TestRunRejectsPositionalArguments
+--- PASS: TestRunRejectsPositionalArguments (0.00s)
+=== RUN   TestRunHelp
+--- PASS: TestRunHelp (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/keygencmd	0.287s
+=== RUN   TestParsePublicPEMAndFingerprint
+=== RUN   TestParsePublicPEMAndFingerprint/valid_ed25519
+=== RUN   TestParsePublicPEMAndFingerprint/valid_ecdsa-p256-sha2
+=== RUN   TestParsePublicPEMAndFingerprint/valid_rsa-pss-sha256
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_label_salah
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_ada_header_PEM
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_dua_blok_PEM_digabung
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_teks_acak_bukan_PEM
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_kunci_RSA_2048
+=== RUN   TestParsePublicPEMAndFingerprint/invalid_kunci_ECDSA_P-384
+--- PASS: TestParsePublicPEMAndFingerprint (0.94s)
+    --- PASS: TestParsePublicPEMAndFingerprint/valid_ed25519 (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/valid_ecdsa-p256-sha2 (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/valid_rsa-pss-sha256 (0.86s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_label_salah (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_ada_header_PEM (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_dua_blok_PEM_digabung (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_teks_acak_bukan_PEM (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_kunci_RSA_2048 (0.00s)
+    --- PASS: TestParsePublicPEMAndFingerprint/invalid_kunci_ECDSA_P-384 (0.00s)
+=== RUN   TestPrivatePEMAndMarshal
+=== RUN   TestPrivatePEMAndMarshal/roundtrip_ed25519
+=== RUN   TestPrivatePEMAndMarshal/roundtrip_ecdsa-p256-sha2
+=== RUN   TestPrivatePEMAndMarshal/roundtrip_rsa-pss-sha256
+=== RUN   TestPrivatePEMAndMarshal/invalid_PEM_kunci_publik
+=== RUN   TestPrivatePEMAndMarshal/invalid_label_RSA_PRIVATE_KEY
+=== RUN   TestPrivatePEMAndMarshal/invalid_kunci_privat_RSA_2048
+=== RUN   TestPrivatePEMAndMarshal/invalid_kunci_privat_ECDSA_P-384
+=== RUN   TestPrivatePEMAndMarshal/no_secret_leak_in_error
+--- PASS: TestPrivatePEMAndMarshal (0.80s)
+    --- PASS: TestPrivatePEMAndMarshal/roundtrip_ed25519 (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/roundtrip_ecdsa-p256-sha2 (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/roundtrip_rsa-pss-sha256 (0.70s)
+    --- PASS: TestPrivatePEMAndMarshal/invalid_PEM_kunci_publik (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/invalid_label_RSA_PRIVATE_KEY (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/invalid_kunci_privat_RSA_2048 (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/invalid_kunci_privat_ECDSA_P-384 (0.00s)
+    --- PASS: TestPrivatePEMAndMarshal/no_secret_leak_in_error (0.00s)
+=== RUN   TestWriteKeyPair
+--- PASS: TestWriteKeyPair (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/keys	1.750s
+=== RUN   TestManifestSerialize
+--- PASS: TestManifestSerialize (0.00s)
+=== RUN   TestManifestValidate
+=== RUN   TestManifestValidate/valid
+=== RUN   TestManifestValidate/paket_huruf_besar
+=== RUN   TestManifestValidate/paket_kosong
+=== RUN   TestManifestValidate/paket_65_karakter
+=== RUN   TestManifestValidate/versi_diawali_-
+=== RUN   TestManifestValidate/nama_artefak_mengandung_/
+=== RUN   TestManifestValidate/nama_dengan_spasi
+=== RUN   TestManifestValidate/nama_129_karakter
+=== RUN   TestManifestValidate/keyid_huruf_besar
+=== RUN   TestManifestValidate/keyid_63_karakter
+=== RUN   TestManifestValidate/sha256_bukan_hex
+=== RUN   TestManifestValidate/Size_-1
+=== RUN   TestManifestValidate/Size_2^53
+=== RUN   TestManifestValidate/Size_0
+=== RUN   TestManifestValidate/Size_2^53-1
+=== RUN   TestManifestValidate/algorithm_kosong
+=== RUN   TestManifestValidate/algorithm_mengandung_kutip
+=== RUN   TestManifestValidate/algorithm_unknown-alg
+--- PASS: TestManifestValidate (0.00s)
+    --- PASS: TestManifestValidate/valid (0.00s)
+    --- PASS: TestManifestValidate/paket_huruf_besar (0.00s)
+    --- PASS: TestManifestValidate/paket_kosong (0.00s)
+    --- PASS: TestManifestValidate/paket_65_karakter (0.00s)
+    --- PASS: TestManifestValidate/versi_diawali_- (0.00s)
+    --- PASS: TestManifestValidate/nama_artefak_mengandung_/ (0.00s)
+    --- PASS: TestManifestValidate/nama_dengan_spasi (0.00s)
+    --- PASS: TestManifestValidate/nama_129_karakter (0.00s)
+    --- PASS: TestManifestValidate/keyid_huruf_besar (0.00s)
+    --- PASS: TestManifestValidate/keyid_63_karakter (0.00s)
+    --- PASS: TestManifestValidate/sha256_bukan_hex (0.00s)
+    --- PASS: TestManifestValidate/Size_-1 (0.00s)
+    --- PASS: TestManifestValidate/Size_2^53 (0.00s)
+    --- PASS: TestManifestValidate/Size_0 (0.00s)
+    --- PASS: TestManifestValidate/Size_2^53-1 (0.00s)
+    --- PASS: TestManifestValidate/algorithm_kosong (0.00s)
+    --- PASS: TestManifestValidate/algorithm_mengandung_kutip (0.00s)
+    --- PASS: TestManifestValidate/algorithm_unknown-alg (0.00s)
+=== RUN   TestManifestParseStrict
+=== RUN   TestManifestParseStrict/ada_spasi_di_antara_token
+=== RUN   TestManifestParseStrict/ada_newline_di_akhir
+=== RUN   TestManifestParseStrict/urutan_field_tertukar
+=== RUN   TestManifestParseStrict/field_tambahan
+=== RUN   TestManifestParseStrict/field_kurang
+=== RUN   TestManifestParseStrict/schema_salah
+=== RUN   TestManifestParseStrict/key_duplikat
+=== RUN   TestManifestParseStrict/size_null
+=== RUN   TestManifestParseStrict/size_string
+=== RUN   TestManifestParseStrict/size_desimal_1.0
+=== RUN   TestManifestParseStrict/size_bool_true
+=== RUN   TestManifestParseStrict/size_2^53
+=== RUN   TestManifestParseStrict/ada_escape_unicode_\u0041
+=== RUN   TestManifestParseStrict/masukan_lebih_dari_16384_byte
+--- PASS: TestManifestParseStrict (0.00s)
+    --- PASS: TestManifestParseStrict/ada_spasi_di_antara_token (0.00s)
+    --- PASS: TestManifestParseStrict/ada_newline_di_akhir (0.00s)
+    --- PASS: TestManifestParseStrict/urutan_field_tertukar (0.00s)
+    --- PASS: TestManifestParseStrict/field_tambahan (0.00s)
+    --- PASS: TestManifestParseStrict/field_kurang (0.00s)
+    --- PASS: TestManifestParseStrict/schema_salah (0.00s)
+    --- PASS: TestManifestParseStrict/key_duplikat (0.00s)
+    --- PASS: TestManifestParseStrict/size_null (0.00s)
+    --- PASS: TestManifestParseStrict/size_string (0.00s)
+    --- PASS: TestManifestParseStrict/size_desimal_1.0 (0.00s)
+    --- PASS: TestManifestParseStrict/size_bool_true (0.00s)
+    --- PASS: TestManifestParseStrict/size_2^53 (0.00s)
+    --- PASS: TestManifestParseStrict/ada_escape_unicode_\u0041 (0.00s)
+    --- PASS: TestManifestParseStrict/masukan_lebih_dari_16384_byte (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/manifest	0.004s
+=== RUN   TestExitCodes
+--- PASS: TestExitCodes (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/result	0.002s
+=== RUN   TestECDSARoundTrip
+--- PASS: TestECDSARoundTrip (0.00s)
+=== RUN   TestEd25519RoundTrip
+--- PASS: TestEd25519RoundTrip (0.00s)
+=== RUN   TestEd25519KAT
+--- PASS: TestEd25519KAT (0.00s)
+=== RUN   TestRSAPSSRoundTrip
+--- PASS: TestRSAPSSRoundTrip (1.12s)
+=== RUN   TestLookup
+--- PASS: TestLookup (0.00s)
+=== RUN   TestForKey
+=== RUN   TestForKey/RSA_2048_bit
+=== RUN   TestForKey/ECDSA_P-384
+=== RUN   TestForKey/Ed25519_31_byte
+=== RUN   TestForKey/bukan_kunci_string
+--- PASS: TestForKey (0.58s)
+    --- PASS: TestForKey/RSA_2048_bit (0.00s)
+    --- PASS: TestForKey/ECDSA_P-384 (0.00s)
+    --- PASS: TestForKey/Ed25519_31_byte (0.00s)
+    --- PASS: TestForKey/bukan_kunci_string (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/sigalg	1.707s
+=== RUN   TestRunSuccessForAllProfiles
+=== RUN   TestRunSuccessForAllProfiles/ed25519
+=== RUN   TestRunSuccessForAllProfiles/ecdsa-p256-sha2
+=== RUN   TestRunSuccessForAllProfiles/rsa-pss-sha256
+--- PASS: TestRunSuccessForAllProfiles (0.77s)
+    --- PASS: TestRunSuccessForAllProfiles/ed25519 (0.00s)
+    --- PASS: TestRunSuccessForAllProfiles/ecdsa-p256-sha2 (0.00s)
+    --- PASS: TestRunSuccessForAllProfiles/rsa-pss-sha256 (0.77s)
+=== RUN   TestRunSuccessForEmptyAndBinaryArtifacts
+=== RUN   TestRunSuccessForEmptyAndBinaryArtifacts/empty
+=== RUN   TestRunSuccessForEmptyAndBinaryArtifacts/binary
+--- PASS: TestRunSuccessForEmptyAndBinaryArtifacts (0.00s)
+    --- PASS: TestRunSuccessForEmptyAndBinaryArtifacts/empty (0.00s)
+    --- PASS: TestRunSuccessForEmptyAndBinaryArtifacts/binary (0.00s)
+=== RUN   TestRunRejectsMissingFlags
+=== RUN   TestRunRejectsMissingFlags/--file
+=== RUN   TestRunRejectsMissingFlags/--package
+=== RUN   TestRunRejectsMissingFlags/--version
+=== RUN   TestRunRejectsMissingFlags/--key
+=== RUN   TestRunRejectsMissingFlags/--out
+--- PASS: TestRunRejectsMissingFlags (0.00s)
+    --- PASS: TestRunRejectsMissingFlags/--file (0.00s)
+    --- PASS: TestRunRejectsMissingFlags/--package (0.00s)
+    --- PASS: TestRunRejectsMissingFlags/--version (0.00s)
+    --- PASS: TestRunRejectsMissingFlags/--key (0.00s)
+    --- PASS: TestRunRejectsMissingFlags/--out (0.00s)
+=== RUN   TestRunRejectsMissingKey
+--- PASS: TestRunRejectsMissingKey (0.00s)
+=== RUN   TestRunRejectsMalformedKeyWithoutLeakingContents
+--- PASS: TestRunRejectsMalformedKeyWithoutLeakingContents (0.00s)
+=== RUN   TestRunRejectsPublicKey
+--- PASS: TestRunRejectsPublicKey (0.00s)
+=== RUN   TestRunRejectsMissingArtifact
+--- PASS: TestRunRejectsMissingArtifact (0.00s)
+=== RUN   TestRunRejectsInvalidManifestFields
+=== RUN   TestRunRejectsInvalidManifestFields/uppercase_package
+=== RUN   TestRunRejectsInvalidManifestFields/version_starts_dash
+=== RUN   TestRunRejectsInvalidManifestFields/filename_contains_space
+--- PASS: TestRunRejectsInvalidManifestFields (0.00s)
+    --- PASS: TestRunRejectsInvalidManifestFields/uppercase_package (0.00s)
+    --- PASS: TestRunRejectsInvalidManifestFields/version_starts_dash (0.00s)
+    --- PASS: TestRunRejectsInvalidManifestFields/filename_contains_space (0.00s)
+=== RUN   TestRunRejectsExistingOutputWithoutForce
+--- PASS: TestRunRejectsExistingOutputWithoutForce (0.00s)
+=== RUN   TestRunOverwritesExistingOutputWithForce
+--- PASS: TestRunOverwritesExistingOutputWithForce (0.01s)
+=== RUN   TestRunRejectsSameArtifactAndOutput
+--- PASS: TestRunRejectsSameArtifactAndOutput (0.00s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/signcmd	0.797s
+=== RUN   TestTrustCommands
+--- PASS: TestTrustCommands (0.06s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/trustcmd	0.062s
+=== RUN   TestAddMergeIdempotentRemove
+--- PASS: TestAddMergeIdempotentRemove (0.00s)
+=== RUN   TestParseRejectInvalidTrust
+=== RUN   TestParseRejectInvalidTrust/duplicate_root
+=== RUN   TestParseRejectInvalidTrust/extra_root
+=== RUN   TestParseRejectInvalidTrust/null_keys
+=== RUN   TestParseRejectInvalidTrust/wrong_type
+=== RUN   TestParseRejectInvalidTrust/duplicate_package
+=== RUN   TestParseRejectInvalidTrust/wildcard_package
+=== RUN   TestParseRejectInvalidTrust/wrong_fingerprint
+=== RUN   TestParseRejectInvalidTrust/wrong_algorithm
+=== RUN   TestParseRejectInvalidTrust/oversize
+=== RUN   TestParseRejectInvalidTrust/duplicate_keyid
+=== RUN   TestParseRejectInvalidTrust/extra_entry
+--- PASS: TestParseRejectInvalidTrust (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/duplicate_root (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/extra_root (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/null_keys (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/wrong_type (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/duplicate_package (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/wildcard_package (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/wrong_fingerprint (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/wrong_algorithm (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/oversize (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/duplicate_keyid (0.00s)
+    --- PASS: TestParseRejectInvalidTrust/extra_entry (0.00s)
+=== RUN   TestSaveLoadAndPreserveOnFailure
+--- PASS: TestSaveLoadAndPreserveOnFailure (0.01s)
+PASS
+ok  	github.com/FityatulhaqRosyidi/sealix/app/internal/truststore	0.014s
