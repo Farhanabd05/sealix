@@ -97,7 +97,7 @@ jobs:
           name: signed-release
           path: release
 
-      - name: Verify without private key
+      - name: Verify 
         shell: bash
         env:
           DIGEST: ${{ inputs.image_digest }}
